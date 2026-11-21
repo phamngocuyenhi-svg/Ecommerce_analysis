@@ -1,0 +1,88 @@
+Check,Dataset,Column,Result,Status,Notes
+Missing Values Check,customers,customer_id,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,country,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,age,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,gender,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,membership_tier,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,registration_date,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,total_orders,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,total_spend_usd,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,avg_order_value_usd,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,days_since_last_purchase,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,preferred_category,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,preferred_device,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,preferred_payment_method,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,acquisition_channel,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,reviews_given,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,avg_review_score,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,returns_made,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,wishlist_items,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,newsletter_subscribed,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,customers,churned,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,monthly_revenue,year,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,monthly_revenue,month,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,monthly_revenue,quarter,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,monthly_revenue,orders,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,monthly_revenue,revenue_usd,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,monthly_revenue,avg_order_value,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,monthly_revenue,avg_discount_pct,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,monthly_revenue,return_rate,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,monthly_revenue,unique_customers,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,monthly_revenue,new_customers,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,order_id,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,customer_id,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,order_date,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,year,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,month,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,quarter,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,day_of_week,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,product_name,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,category,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,unit_price_usd,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,quantity,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,subtotal_usd,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,discount_pct,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,discount_amount_usd,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,shipping_fee_usd,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,tax_pct,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,tax_amount_usd,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,total_amount_usd,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,payment_method,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,device_used,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,delivery_days,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,delivery_date,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,order_status,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,returned,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,customer_rating,"15,749 nulls (63.0%)",WARNING,Khuyết thiếu tự nhiên trên đơn Delivered/Cancelled; bảo lưu theo rule.md
+Missing Values Check,orders,session_duration_minutes,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,pages_viewed_before_purchase,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,is_repeat_customer,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,orders,rating_provided,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,product_summary,category,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,product_summary,product_name,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,product_summary,total_orders,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,product_summary,total_revenue_usd,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,product_summary,avg_price,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,product_summary,avg_rating,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,product_summary,return_rate,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,product_summary,avg_discount_pct,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Missing Values Check,product_summary,avg_delivery_days,0 nulls (100% hoàn thiện),PASS,Dữ liệu đầy đủ không khuyết thiếu
+Primary Key Uniqueness,customers,customer_id,"8,000 / 8,000 duy nhất (0 trùng lặp)",PASS,Khóa chính đạt toàn vẹn thực thể 100%
+Primary Key Uniqueness,orders,order_id,"25,000 / 25,000 duy nhất (0 trùng lặp)",PASS,Khóa chính đạt toàn vẹn thực thể 100%
+Primary Key Uniqueness,monthly_revenue,year+month,75 / 75 duy nhất (0 trùng lặp),PASS,Khóa chính đạt toàn vẹn thực thể 100%
+Primary Key Uniqueness,product_summary,product_name,140 / 140 duy nhất (0 trùng lặp),PASS,Khóa chính đạt toàn vẹn thực thể 100%
+Data Type Validation,customers,registration_date,Kiểu dữ liệu: datetime64[us],PASS,Chuẩn hóa định dạng datetime64[ns] thành công
+Data Type Validation,orders,order_date,Kiểu dữ liệu: datetime64[us],PASS,Chuẩn hóa định dạng datetime64[ns] thành công
+Data Type Validation,orders,delivery_date,Kiểu dữ liệu: datetime64[us],PASS,Chuẩn hóa định dạng datetime64[ns] thành công
+Value Boundary Constraint,customers,age,Bản ghi nằm trong miền hợp lệ,PASS,Tuổi hợp lệ từ 18 đến 100
+Value Boundary Constraint,customers,total_spend_usd,Bản ghi nằm trong miền hợp lệ,PASS,Tổng chi tiêu không âm
+Value Boundary Constraint,orders,unit_price_usd,Bản ghi nằm trong miền hợp lệ,PASS,Đơn giá dương (> 0)
+Value Boundary Constraint,orders,quantity,Bản ghi nằm trong miền hợp lệ,PASS,Số lượng mua >= 1
+Value Boundary Constraint,orders,total_amount_usd,Bản ghi nằm trong miền hợp lệ,PASS,Tổng hóa đơn dương (> 0)
+Value Boundary Constraint,orders,delivery_days,Bản ghi nằm trong miền hợp lệ,PASS,Số ngày giao hàng >= 0
+Value Boundary Constraint,monthly_revenue,revenue_usd,Bản ghi nằm trong miền hợp lệ,PASS,Doanh thu tháng >= 0
+Value Boundary Constraint,product_summary,return_rate,Bản ghi nằm trong miền hợp lệ,PASS,Tỷ lệ trả hàng 0 - 100%
+Referential Integrity,orders -> customers,customer_id,"7,663 / 7,663 khách hàng trong đơn khớp đã với danh mục khách hàng",PASS,Toàn vẹn khóa ngoại khách hàng đạt chuẩn
+Referential Integrity,orders -> product_summary,product_name,140 / 140 sản phẩm trong đơn khớp đã với danh mục sản phẩm,PASS,Toàn vẹn danh mục sản phẩm đạt chuẩn
+Cross-Dataset Consistency,orders (Delivered) vs monthly_revenue,"orders, total_amount_usd","Khớp chính xác số đơn (20,497) và doanh thu ($2,585,126.50)",PASS,monthly_revenue là tập con đơn Delivered
+Cross-Dataset Consistency,orders (Non-cancelled) vs product_summary,"total_orders, total_revenue_usd","Khớp chính xác số đơn (23,544) và doanh thu ($2,958,994.41)",PASS,product_summary là tập con đơn Non-cancelled
