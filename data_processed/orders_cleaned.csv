@@ -1,0 +1,236 @@
+order_id,customer_id,order_date,year,month,quarter,day_of_week,product_name,category,unit_price_usd,quantity,subtotal_usd,discount_pct,discount_amount_usd,shipping_fee_usd,tax_pct,tax_amount_usd,total_amount_usd,payment_method,device_used,delivery_days,delivery_date,order_status,returned,customer_rating,session_duration_minutes,pages_viewed_before_purchase,is_repeat_customer,rating_provided
+O000001,C07108,2020-08-27,2020,8,Q3,Thursday,Tire Inflator,Automotive,62.91,1,62.91,0,0.0,0.0,18,11.32,74.23,Credit Card,Desktop,3,2020-08-30,Delivered,0,,14.4,1,1,0
+O000002,C03487,2024-04-11,2024,4,Q2,Thursday,Stud Earrings Gold,Jewelry & Accessories,18.44,1,18.44,0,0.0,3.99,10,1.84,24.27,Credit Card,Mobile,2,2024-04-13,Delivered,0,,9.0,4,0,0
+O000003,C03062,2023-06-25,2023,6,Q2,Sunday,Pen Set Premium,Office Supplies,109.79,1,109.79,20,21.96,0.0,8,7.03,94.86,PayPal,Desktop,3,2023-06-28,Delivered,0,4.0,3.2,17,0,1
+O000004,C00888,2020-08-16,2020,8,Q3,Sunday,Smart Watch Series 5,Electronics,87.21,1,87.21,50,43.6,0.0,8,3.49,47.1,Credit Card,Tablet,2,2020-08-18,Returned,1,,32.2,3,1,0
+O000005,C01674,2020-04-24,2020,4,Q2,Friday,Stud Earrings Gold,Jewelry & Accessories,94.3,2,188.6,0,0.0,9.99,5,9.43,208.02,Debit Card,Mobile,5,2020-04-29,Delivered,0,2.8,54.7,2,1,1
+O000006,C07761,2022-04-27,2022,4,Q2,Wednesday,Gaming Mouse RGB,Electronics,62.73,1,62.73,0,0.0,3.99,8,5.02,71.74,Credit Card,Desktop,3,2022-04-30,Returned,1,,15.7,10,0,0
+O000007,C02205,2023-12-14,2023,12,Q4,Thursday,Pull-up Bar,Sports & Outdoors,62.33,2,124.66,0,0.0,0.0,12,14.96,139.62,Credit Card,Desktop,4,2023-12-18,Delivered,0,,10.9,9,0,0
+O000008,C01219,2024-04-25,2024,4,Q2,Thursday,Tote Bag Canvas,Jewelry & Accessories,89.8,1,89.8,0,0.0,4.99,0,0.0,94.79,Debit Card,Mobile,10,2024-05-05,Delivered,0,4.8,5.5,4,1,1
+O000009,C03734,2025-06-05,2025,6,Q2,Thursday,Shower Curtain,Home & Kitchen,65.09,2,130.18,0,0.0,6.99,10,13.02,150.19,Debit Card,Desktop,2,2025-06-07,Delivered,0,,10.9,7,0,0
+O000010,C02055,2021-08-19,2021,8,Q3,Thursday,Winter Jacket,Clothing & Apparel,52.41,3,157.23,0,0.0,3.99,20,31.45,192.67,PayPal,Desktop,5,2021-08-24,Delivered,0,2.7,8.9,4,1,1
+O000011,C05153,2022-03-28,2022,3,Q1,Monday,Dashcam 4K,Automotive,115.86,1,115.86,15,17.38,0.0,12,11.82,110.3,Debit Card,Mobile,4,2022-04-01,Delivered,0,4.2,10.4,4,0,1
+O000012,C06548,2024-05-01,2024,5,Q2,Wednesday,Running Shoes,Clothing & Apparel,37.98,1,37.98,0,0.0,0.0,10,3.8,41.78,Cryptocurrency,Desktop,4,2024-05-05,Delivered,0,2.4,24.0,10,1,1
+O000013,C00717,2026-02-18,2026,2,Q1,Wednesday,Pull-up Bar,Sports & Outdoors,31.49,1,31.49,0,0.0,4.99,10,3.15,39.63,Debit Card,Desktop,3,2026-02-21,Delivered,0,4.2,12.3,1,1,1
+O000014,C03489,2020-12-13,2020,12,Q4,Sunday,Protein Powder Vanilla,Food & Grocery,24.05,1,24.05,15,3.61,0.0,20,4.09,24.53,Cryptocurrency,Tablet,5,2020-12-18,Processing,0,,8.5,2,1,0
+O000015,C05450,2020-05-31,2020,5,Q2,Sunday,The Lean Startup,Books,18.47,1,18.47,25,4.62,3.99,8,1.11,18.95,Credit Card,Mobile,10,2020-06-10,Delivered,0,4.8,22.1,2,1,1
+O000016,C07823,2025-05-14,2025,5,Q2,Wednesday,Sunscreen SPF50,Beauty & Personal Care,23.5,1,23.5,0,0.0,0.0,12,2.82,26.32,Credit Card,Mobile,4,2025-05-18,Delivered,0,,9.5,11,1,0
+O000017,C03783,2022-09-25,2022,9,Q3,Sunday,LED Desk Lamp,Electronics,142.21,1,142.21,15,21.33,4.99,12,14.51,140.38,UPI / Digital Wallet,Mobile,10,2022-10-05,Delivered,0,,22.0,12,1,0
+O000018,C01465,2025-04-22,2025,4,Q2,Tuesday,Wireless Earbuds Pro,Electronics,112.94,2,225.88,5,11.29,4.99,12,25.75,245.33,PayPal,Desktop,3,2025-04-25,Delivered,0,,35.8,7,0,0
+O000019,C04004,2025-06-26,2025,6,Q2,Thursday,Running Shoes,Clothing & Apparel,50.13,3,150.39,10,15.04,0.0,10,13.54,148.89,UPI / Digital Wallet,Mobile,4,2025-06-30,Delivered,0,,49.3,11,0,0
+O000020,C02873,2021-03-19,2021,3,Q1,Friday,Yoga Mat Non-slip,Sports & Outdoors,32.91,1,32.91,20,6.58,0.0,20,5.27,31.6,Buy Now Pay Later,Desktop,7,2021-03-26,Delivered,0,,13.0,8,1,0
+O000021,C05396,2026-01-24,2026,1,Q1,Saturday,Car Phone Mount,Automotive,41.29,1,41.29,0,0.0,6.99,12,4.95,53.23,Credit Card,Desktop,5,2026-01-29,Delivered,0,3.4,15.8,1,1,1
+O000022,C06927,2023-07-19,2023,7,Q3,Wednesday,Winter Jacket,Clothing & Apparel,29.16,2,58.32,0,0.0,6.99,20,11.66,76.97,PayPal,Mobile,2,2023-07-21,Cancelled,0,,5.6,1,1,0
+O000023,C00352,2022-08-20,2022,8,Q3,Saturday,Sunscreen SPF50,Beauty & Personal Care,11.66,2,23.32,0,0.0,6.99,10,2.33,32.64,Buy Now Pay Later,Desktop,2,2022-08-22,Delivered,0,,5.9,2,1,0
+O000024,C05873,2021-01-22,2021,1,Q1,Friday,Deep Work,Books,15.55,2,31.1,0,0.0,0.0,8,2.49,33.59,Buy Now Pay Later,Mobile,3,2021-01-25,Delivered,0,4.3,28.9,18,1,1
+O000025,C01275,2025-08-02,2025,8,Q3,Saturday,Formal Dress Shirt,Clothing & Apparel,53.71,1,53.71,0,0.0,4.99,8,4.3,63.0,Buy Now Pay Later,Mobile,2,2025-08-04,Processing,0,,22.8,8,1,0
+O000026,C01668,2024-11-24,2024,11,Q4,Sunday,Gaming Mouse RGB,Electronics,122.83,1,122.83,0,0.0,0.0,18,22.11,144.94,Credit Card,Mobile,3,2024-11-27,Processing,0,,39.5,1,0,0
+O000027,C03555,2023-12-08,2023,12,Q4,Friday,Omega-3 Fish Oil,Health & Wellness,16.97,1,16.97,0,0.0,4.99,5,0.85,22.81,Credit Card,Tablet,4,2023-12-12,Delivered,0,,5.9,5,0,0
+O000028,C07787,2020-12-14,2020,12,Q4,Monday,Silk Scarf,Jewelry & Accessories,43.81,2,87.62,0,0.0,0.0,10,8.76,96.38,Credit Card,Mobile,10,2020-12-24,Delivered,0,2.7,7.0,8,1,1
+O000029,C01926,2024-08-29,2024,8,Q3,Thursday,Portable Scale,Travel & Luggage,156.13,1,156.13,20,31.23,4.99,10,12.49,142.38,Debit Card,Tablet,5,2024-09-03,Delivered,0,,4.4,5,1,0
+O000030,C02238,2025-01-25,2025,1,Q1,Saturday,Ring Set 5pc,Jewelry & Accessories,169.8,1,169.8,0,0.0,0.0,8,13.58,183.38,UPI / Digital Wallet,Desktop,5,2025-01-30,Delivered,0,,4.8,7,1,0
+O000031,C00492,2021-08-29,2021,8,Q3,Sunday,Dark Chocolate 85%,Food & Grocery,21.5,4,86.0,20,17.2,3.99,18,12.38,85.17,UPI / Digital Wallet,Mobile,3,2021-09-01,Delivered,0,,11.1,2,1,0
+O000032,C04094,2025-05-23,2025,5,Q2,Friday,Shower Curtain,Home & Kitchen,47.05,1,47.05,15,7.06,0.0,8,3.2,43.19,Debit Card,Mobile,4,2025-05-27,Delivered,0,4.8,8.0,2,0,1
+O000033,C05882,2021-06-22,2021,6,Q2,Tuesday,Smart Watch Series 5,Electronics,42.74,1,42.74,5,2.14,4.99,12,4.87,50.46,Debit Card,Mobile,4,2021-06-26,Delivered,0,,4.0,13,1,0
+O000034,C00293,2025-07-19,2025,7,Q3,Saturday,Running Shoes,Clothing & Apparel,81.87,2,163.74,0,0.0,4.99,12,19.65,188.38,Debit Card,Mobile,2,2025-07-21,Processing,0,,37.3,1,0,0
+O000035,C03042,2022-08-30,2022,8,Q3,Tuesday,Hiking Backpack,Sports & Outdoors,35.34,2,70.68,0,0.0,6.99,8,5.65,83.32,Bank Transfer,Tablet,7,2022-09-06,Delivered,0,,13.3,21,0,0
+O000036,C07540,2022-07-05,2022,7,Q3,Tuesday,Portable Charger 20000mAh,Electronics,133.88,3,401.64,15,60.25,0.0,12,40.97,382.36,UPI / Digital Wallet,Mobile,3,2022-07-08,Delivered,0,3.6,10.0,3,1,1
+O000037,C01274,2023-06-19,2023,6,Q2,Monday,Shampoo Argan Oil,Beauty & Personal Care,17.63,1,17.63,0,0.0,4.99,0,0.0,22.62,Debit Card,Mobile,7,2023-06-26,Delivered,0,4.1,5.3,2,1,1
+O000038,C06513,2020-07-27,2020,7,Q3,Monday,Electric Kettle,Home & Kitchen,93.1,1,93.1,0,0.0,3.99,12,11.17,108.26,Debit Card,Desktop,1,2020-07-28,Delivered,0,3.0,10.8,1,1,1
+O000039,C02310,2025-03-21,2025,3,Q1,Friday,Cycling Gloves,Sports & Outdoors,52.29,1,52.29,0,0.0,0.0,5,2.61,54.9,PayPal,Mobile,1,2025-03-22,Delivered,0,,12.4,4,0,0
+O000040,C01825,2023-05-04,2023,5,Q2,Thursday,Melatonin 5mg,Health & Wellness,38.24,1,38.24,30,11.47,0.0,10,2.68,29.45,Credit Card,Desktop,1,2023-05-05,Delivered,0,4.8,15.4,2,1,1
+O000041,C06617,2021-09-01,2021,9,Q3,Wednesday,Formal Dress Shirt,Clothing & Apparel,126.56,4,506.24,0,0.0,4.99,5,25.31,536.54,PayPal,Desktop,3,2021-09-04,Delivered,0,4.0,2.5,1,0,1
+O000042,C07915,2025-04-19,2025,4,Q2,Saturday,Desk Organizer,Office Supplies,44.18,1,44.18,0,0.0,0.0,0,0.0,44.18,PayPal,Desktop,3,2025-04-22,Delivered,0,,13.7,1,1,0
+O000043,C00957,2021-03-20,2021,3,Q1,Saturday,Mechanical Keyboard,Electronics,179.63,4,718.52,0,0.0,0.0,20,143.7,862.22,Credit Card,Mobile,3,2021-03-23,Delivered,0,4.7,39.2,1,1,1
+O000044,C05737,2021-03-04,2021,3,Q1,Thursday,USB-C Hub,Electronics,80.95,1,80.95,0,0.0,6.99,8,6.48,94.42,Credit Card,Mobile,5,2021-03-09,Delivered,0,,4.7,4,0,0
+O000045,C05853,2023-11-09,2023,11,Q4,Thursday,Mattress Topper,Home & Kitchen,54.57,1,54.57,0,0.0,6.99,8,4.37,65.93,Debit Card,Mobile,1,2023-11-10,Delivered,0,3.0,3.3,10,1,1
+O000046,C05685,2022-01-18,2022,1,Q1,Tuesday,Wall Clock Modern,Home & Kitchen,38.15,1,38.15,0,0.0,6.99,20,7.63,52.77,Credit Card,Mobile,1,2022-01-19,Cancelled,0,,9.2,12,0,0
+O000047,C07293,2020-06-10,2020,6,Q2,Wednesday,Flea Collar,Pet Supplies,27.16,1,27.16,0,0.0,0.0,8,2.17,29.33,Credit Card,Mobile,4,2020-06-14,Delivered,0,,11.3,9,1,0
+O000048,C00452,2025-12-14,2025,12,Q4,Sunday,Vitamin C Serum,Beauty & Personal Care,25.86,4,103.44,0,0.0,4.99,12,12.41,120.84,Credit Card,Desktop,5,2025-12-19,Returned,1,,8.7,3,1,0
+O000049,C07615,2023-11-16,2023,11,Q4,Thursday,Mechanical Keyboard,Electronics,124.14,1,124.14,0,0.0,4.99,10,12.41,141.54,Debit Card,Mobile,2,2023-11-18,Delivered,0,,9.1,10,1,0
+O000050,C03219,2023-02-13,2023,2,Q1,Monday,USB-C Hub,Electronics,95.81,1,95.81,0,0.0,3.99,0,0.0,99.8,Buy Now Pay Later,Mobile,7,2023-02-20,Delivered,0,3.9,5.3,5,1,1
+O000051,C03444,2023-08-13,2023,8,Q3,Sunday,Leather Belt,Clothing & Apparel,73.19,2,146.38,0,0.0,0.0,10,14.64,161.02,UPI / Digital Wallet,Mobile,3,2023-08-16,Delivered,0,2.2,11.9,4,1,1
+O000052,C00131,2025-04-23,2025,4,Q2,Wednesday,Smart Plug 4-Pack,Electronics,125.61,1,125.61,0,0.0,0.0,8,10.05,135.66,Credit Card,Desktop,3,2025-04-26,Delivered,0,,20.6,9,0,0
+O000053,C03836,2020-04-14,2020,4,Q2,Tuesday,Casual Sneakers,Clothing & Apparel,40.33,1,40.33,5,2.02,4.99,8,3.06,46.36,Credit Card,Tablet,2,2020-04-16,Delivered,0,3.4,4.5,23,1,1
+O000054,C01124,2024-09-16,2024,9,Q3,Monday,Sunscreen SPF50,Beauty & Personal Care,44.22,1,44.22,15,6.63,4.99,18,6.77,49.35,Debit Card,Mobile,10,2024-09-26,Delivered,0,4.0,53.6,7,0,1
+O000055,C07314,2021-06-12,2021,6,Q2,Saturday,Smart Plug 4-Pack,Electronics,223.66,4,894.64,0,0.0,6.99,0,0.0,901.63,Buy Now Pay Later,Mobile,4,2021-06-16,Delivered,0,4.3,22.5,1,1,1
+O000056,C06526,2024-08-06,2024,8,Q3,Tuesday,Energy Bars 12-Pack,Food & Grocery,39.67,1,39.67,0,0.0,0.0,5,1.98,41.65,Credit Card,Desktop,5,2024-08-11,Delivered,0,,8.3,21,1,0
+O000057,C07987,2025-07-16,2025,7,Q3,Wednesday,Jump Rope Speed,Sports & Outdoors,48.84,1,48.84,0,0.0,6.99,20,9.77,65.6,UPI / Digital Wallet,Mobile,4,2025-07-20,Delivered,0,4.4,28.0,9,1,1
+O000058,C02458,2022-06-26,2022,6,Q2,Sunday,Ashwagandha Extract,Health & Wellness,38.87,1,38.87,25,9.72,0.0,20,5.83,34.98,Buy Now Pay Later,Tablet,5,2022-07-01,Returned,1,,5.1,1,1,0
+O000059,C02277,2023-08-13,2023,8,Q3,Sunday,Slim Fit Jeans,Clothing & Apparel,36.94,1,36.94,0,0.0,9.99,0,0.0,46.93,Debit Card,Tablet,1,2023-08-14,Delivered,0,,21.1,5,1,0
+O000060,C04450,2021-03-12,2021,3,Q1,Friday,Slim Fit Jeans,Clothing & Apparel,70.97,2,141.94,0,0.0,3.99,10,14.19,160.12,Debit Card,Desktop,5,2021-03-17,Delivered,0,,24.2,5,1,0
+O000061,C06292,2023-08-27,2023,8,Q3,Sunday,Formal Dress Shirt,Clothing & Apparel,78.85,2,157.7,0,0.0,9.99,10,15.77,183.46,Credit Card,Mobile,1,2023-08-28,Delivered,0,,6.9,12,0,0
+O000062,C07908,2023-05-24,2023,5,Q2,Wednesday,Compression Socks,Travel & Luggage,49.41,1,49.41,0,0.0,9.99,12,5.93,65.33,PayPal,Tablet,2,2023-05-26,Delivered,0,,36.6,10,1,0
+O000063,C05525,2024-12-24,2024,12,Q4,Tuesday,Portable Charger 20000mAh,Electronics,96.15,3,288.45,0,0.0,6.99,0,0.0,295.44,Debit Card,Mobile,3,2024-12-27,Delivered,0,,17.1,7,0,0
+O000064,C05225,2020-11-23,2020,11,Q4,Monday,Python Crash Course,Books,30.86,1,30.86,0,0.0,0.0,8,2.47,33.33,Credit Card,Mobile,3,2020-11-26,Processing,0,,52.5,1,1,0
+O000065,C00044,2024-05-10,2024,5,Q2,Friday,Storage Containers,Home & Kitchen,122.0,1,122.0,0,0.0,0.0,12,14.64,136.64,PayPal,Desktop,4,2024-05-14,Delivered,0,,2.3,21,0,0
+O000066,C07302,2020-12-12,2020,12,Q4,Saturday,Coffee Maker Drip,Home & Kitchen,50.98,1,50.98,15,7.65,4.99,10,4.33,52.65,Credit Card,Mobile,2,2020-12-14,Delivered,0,,42.8,6,0,0
+O000067,C03180,2022-10-15,2022,10,Q4,Saturday,USB Car Charger,Automotive,73.73,1,73.73,5,3.69,0.0,0,0.0,70.04,PayPal,Desktop,2,2022-10-17,Cancelled,0,,6.5,5,1,0
+O000068,C01293,2026-01-30,2026,1,Q1,Friday,Melatonin 5mg,Health & Wellness,32.61,2,65.22,0,0.0,6.99,20,13.04,85.25,Bank Transfer,Mobile,7,2026-02-06,Delivered,0,4.3,1.6,5,0,1
+O000069,C00670,2021-02-12,2021,2,Q1,Friday,Hoodie Pullover,Clothing & Apparel,32.32,2,64.64,20,12.93,4.99,5,2.59,59.29,UPI / Digital Wallet,Desktop,1,2021-02-13,Delivered,0,3.9,12.5,4,1,1
+O000070,C07819,2023-09-03,2023,9,Q3,Sunday,Toiletry Bag,Travel & Luggage,106.03,1,106.03,0,0.0,0.0,20,21.21,127.24,Credit Card,Mobile,5,2023-09-08,Delivered,0,3.7,20.3,6,0,1
+O000071,C04042,2025-07-04,2025,7,Q3,Friday,Sunscreen SPF50,Beauty & Personal Care,21.55,1,21.55,0,0.0,6.99,18,3.88,32.42,Credit Card,Mobile,3,2025-07-07,Processing,0,,10.5,4,1,0
+O000072,C03557,2021-11-24,2021,11,Q4,Wednesday,Sunglasses UV400,Jewelry & Accessories,100.5,3,301.5,5,15.08,0.0,18,51.56,337.98,Debit Card,Mobile,5,2021-11-29,Delivered,0,,3.8,4,0,0
+O000073,C07787,2021-09-18,2021,9,Q3,Saturday,Leather Belt,Clothing & Apparel,71.56,2,143.12,0,0.0,4.99,8,11.45,159.56,UPI / Digital Wallet,Desktop,7,2021-09-25,Delivered,0,,22.4,2,1,0
+O000074,C00094,2023-04-29,2023,4,Q2,Saturday,Mattress Topper,Home & Kitchen,61.03,3,183.09,20,36.62,4.99,8,11.72,163.18,UPI / Digital Wallet,Desktop,1,2023-04-30,Delivered,0,4.8,9.9,1,0,1
+O000075,C07145,2025-12-15,2025,12,Q4,Monday,LED Desk Lamp,Electronics,104.98,1,104.98,5,5.25,4.99,20,19.95,124.67,PayPal,Mobile,2,2025-12-17,Delivered,0,3.9,7.4,7,1,1
+O000076,C05703,2021-02-11,2021,2,Q1,Thursday,Formal Dress Shirt,Clothing & Apparel,84.5,1,84.5,25,21.12,0.0,18,11.41,74.79,Credit Card,Mobile,3,2021-02-14,Delivered,0,4.2,4.1,6,1,1
+O000077,C06190,2022-10-30,2022,10,Q4,Sunday,Hyaluronic Acid Moisturizer,Beauty & Personal Care,18.74,5,93.7,0,0.0,0.0,8,7.5,101.2,UPI / Digital Wallet,Mobile,2,2022-11-01,Delivered,0,3.2,22.4,9,1,1
+O000078,C01226,2021-10-16,2021,10,Q4,Saturday,Knife Set 8pc,Home & Kitchen,99.75,2,199.5,20,39.9,6.99,8,12.77,179.36,Cryptocurrency,Mobile,2,2021-10-18,Delivered,0,,16.6,11,0,0
+O000079,C00843,2021-08-31,2021,8,Q3,Tuesday,Gaming Mouse RGB,Electronics,189.49,1,189.49,20,37.9,0.0,20,30.32,181.91,Cryptocurrency,Mobile,4,2021-09-04,Delivered,0,,9.4,1,1,0
+O000080,C04880,2025-08-02,2025,8,Q3,Saturday,USB-C Hub,Electronics,104.13,2,208.26,0,0.0,4.99,0,0.0,213.25,Buy Now Pay Later,Tablet,3,2025-08-05,Delivered,0,,4.4,1,1,0
+O000081,C06507,2024-02-05,2024,2,Q1,Monday,Wall Clock Modern,Home & Kitchen,131.07,4,524.28,0,0.0,9.99,12,62.91,597.18,PayPal,Tablet,2,2024-02-07,Delivered,0,,9.6,6,1,0
+O000082,C03635,2024-05-14,2024,5,Q2,Tuesday,Electric Kettle,Home & Kitchen,25.8,1,25.8,10,2.58,4.99,0,0.0,28.21,Debit Card,Mobile,2,2024-05-16,Delivered,0,3.0,16.0,10,1,1
+O000083,C03234,2021-07-25,2021,7,Q3,Sunday,Casual Sneakers,Clothing & Apparel,73.24,1,73.24,0,0.0,0.0,10,7.32,80.56,PayPal,Mobile,2,2021-07-27,Delivered,0,,17.3,7,1,0
+O000084,C01268,2025-03-10,2025,3,Q1,Monday,Bluetooth Speaker,Electronics,186.47,4,745.88,0,0.0,3.99,18,134.26,884.13,Credit Card,Mobile,2,2025-03-12,Delivered,0,,11.2,1,1,0
+O000085,C06923,2020-10-07,2020,10,Q4,Wednesday,Storage Containers,Home & Kitchen,47.15,1,47.15,0,0.0,3.99,18,8.49,59.63,UPI / Digital Wallet,Mobile,5,2020-10-12,Delivered,0,3.7,11.1,7,1,1
+O000086,C03527,2021-11-13,2021,11,Q4,Saturday,Hiking Backpack,Sports & Outdoors,83.34,1,83.34,0,0.0,4.99,20,16.67,105.0,Debit Card,Desktop,2,2021-11-15,Delivered,0,4.3,6.4,3,1,1
+O000087,C07378,2024-01-10,2024,1,Q1,Wednesday,Clean Code,Books,22.02,2,44.04,5,2.2,4.99,0,0.0,46.83,Credit Card,Mobile,3,2024-01-13,Delivered,0,4.1,8.7,3,1,1
+O000088,C05595,2020-09-14,2020,9,Q3,Monday,Zinc Lozenges,Health & Wellness,29.41,3,88.23,0,0.0,4.99,10,8.82,102.04,Credit Card,Mobile,5,2020-09-19,Delivered,0,,17.3,1,1,0
+O000089,C05351,2021-02-25,2021,2,Q1,Thursday,Sports Socks 6-Pack,Clothing & Apparel,54.71,2,109.42,0,0.0,0.0,8,8.75,118.17,Credit Card,Desktop,4,2021-03-01,Delivered,0,,28.3,12,0,0
+O000090,C06101,2020-06-05,2020,6,Q2,Friday,Gaming Mouse RGB,Electronics,280.45,1,280.45,25,70.11,0.0,20,42.07,252.41,Debit Card,Mobile,4,2020-06-09,Delivered,0,4.3,8.8,1,1,1
+O000091,C06965,2024-05-29,2024,5,Q2,Wednesday,Ashwagandha Extract,Health & Wellness,23.55,4,94.2,0,0.0,0.0,0,0.0,94.2,UPI / Digital Wallet,Desktop,7,2024-06-05,Delivered,0,,19.8,8,1,0
+O000092,C00547,2026-03-30,2026,3,Q1,Monday,Electric Kettle,Home & Kitchen,37.08,2,74.16,0,0.0,6.99,0,0.0,81.15,UPI / Digital Wallet,Tablet,7,2026-04-06,Delivered,0,4.3,33.1,5,0,1
+O000093,C04528,2023-09-25,2023,9,Q3,Monday,Stuffed Animal Bear,Toys & Games,37.55,2,75.1,0,0.0,9.99,8,6.01,91.1,Credit Card,Desktop,3,2023-09-28,Delivered,0,,8.7,3,1,0
+O000094,C03146,2021-11-06,2021,11,Q4,Saturday,Phone Case Designer,Jewelry & Accessories,78.01,1,78.01,10,7.8,3.99,12,8.43,82.63,Credit Card,Mobile,4,2021-11-10,Delivered,0,,13.5,10,1,0
+O000095,C02786,2022-04-09,2022,4,Q2,Saturday,Quinoa 2kg,Food & Grocery,30.98,2,61.96,0,0.0,4.99,0,0.0,66.95,PayPal,Desktop,4,2022-04-13,Delivered,0,,9.2,9,1,0
+O000096,C04311,2024-09-04,2024,9,Q3,Wednesday,The Alchemist,Books,22.01,1,22.01,0,0.0,4.99,10,2.2,29.2,Credit Card,Mobile,5,2024-09-09,Processing,0,,7.0,12,0,0
+O000097,C01652,2023-02-24,2023,2,Q1,Friday,Smart Plug 4-Pack,Electronics,134.34,1,134.34,30,40.3,3.99,18,16.93,114.96,Credit Card,Mobile,2,2023-02-26,Returned,1,,32.0,5,1,0
+O000098,C03992,2025-06-01,2025,6,Q2,Sunday,Nail Kit,Beauty & Personal Care,11.91,2,23.82,0,0.0,0.0,12,2.86,26.68,Credit Card,Tablet,3,2025-06-04,Delivered,0,4.8,18.2,11,1,1
+O000099,C06678,2022-03-05,2022,3,Q1,Saturday,Windshield Cleaner,Automotive,96.42,1,96.42,0,0.0,0.0,18,17.36,113.78,PayPal,Mobile,5,2022-03-10,Delivered,0,,9.0,3,1,0
+O000100,C00159,2025-12-15,2025,12,Q4,Monday,USB Car Charger,Automotive,56.0,2,112.0,0,0.0,0.0,8,8.96,120.96,Bank Transfer,Desktop,14,2025-12-29,Delivered,0,4.8,4.8,3,1,1
+O000101,C04612,2022-07-27,2022,7,Q3,Wednesday,Classic White Tee,Clothing & Apparel,67.68,1,67.68,0,0.0,0.0,10,6.77,74.45,Credit Card,Tablet,1,2022-07-28,Delivered,0,,8.6,4,1,0
+O000102,C06601,2022-10-29,2022,10,Q4,Saturday,Smart Plug 4-Pack,Electronics,192.59,1,192.59,0,0.0,6.99,10,19.26,218.84,Debit Card,Desktop,7,2022-11-05,Delivered,0,,17.8,15,0,0
+O000103,C01733,2021-09-03,2021,9,Q3,Friday,Slim Fit Jeans,Clothing & Apparel,113.15,1,113.15,0,0.0,4.99,0,0.0,118.14,PayPal,Mobile,5,2021-09-08,Delivered,0,,5.9,3,1,0
+O000104,C05648,2026-01-21,2026,1,Q1,Wednesday,Dashcam 4K,Automotive,56.99,2,113.98,0,0.0,0.0,5,5.7,119.68,PayPal,Desktop,3,2026-01-24,Delivered,0,,31.9,3,1,0
+O000105,C07865,2023-10-14,2023,10,Q4,Saturday,Air Fryer 5L,Home & Kitchen,39.64,2,79.28,15,11.89,9.99,0,0.0,77.38,Credit Card,Mobile,10,2023-10-24,Delivered,0,,14.2,1,1,0
+O000106,C07602,2025-08-28,2025,8,Q3,Thursday,Jump Rope Speed,Sports & Outdoors,31.02,1,31.02,0,0.0,3.99,20,6.2,41.21,PayPal,Desktop,5,2025-09-02,Delivered,0,,10.5,7,1,0
+O000107,C00919,2021-06-28,2021,6,Q2,Monday,USB Car Charger,Automotive,90.16,1,90.16,10,9.02,4.99,10,8.11,94.24,Debit Card,Mobile,3,2021-07-01,Delivered,0,4.8,6.1,17,1,1
+O000108,C03367,2024-03-15,2024,3,Q1,Friday,Non-stick Pan,Home & Kitchen,58.54,2,117.08,0,0.0,3.99,0,0.0,121.07,Credit Card,Mobile,5,2024-03-20,Delivered,0,3.8,11.1,16,1,1
+O000109,C02465,2021-10-11,2021,10,Q4,Monday,Atomic Habits,Books,20.81,5,104.05,10,10.4,9.99,8,7.49,111.13,Debit Card,Desktop,3,2021-10-14,Delivered,0,,22.9,4,1,0
+O000110,C02037,2025-07-13,2025,7,Q3,Sunday,Educational Tablet,Toys & Games,49.49,1,49.49,40,19.8,0.0,18,5.34,35.03,Credit Card,Desktop,10,2025-07-23,Delivered,0,,34.5,9,1,0
+O000111,C03409,2022-04-01,2022,4,Q2,Friday,Classic White Tee,Clothing & Apparel,69.87,2,139.74,0,0.0,0.0,0,0.0,139.74,Credit Card,Mobile,4,2022-04-05,Delivered,0,3.7,24.1,6,1,1
+O000112,C05689,2025-02-15,2025,2,Q1,Saturday,Outdoor Frisbee,Toys & Games,53.12,3,159.36,0,0.0,3.99,0,0.0,163.35,Debit Card,Mobile,3,2025-02-18,Delivered,0,,8.8,7,1,0
+O000113,C06211,2021-04-26,2021,4,Q2,Monday,Storage Containers,Home & Kitchen,91.04,1,91.04,0,0.0,0.0,8,7.28,98.32,Debit Card,Desktop,2,2021-04-28,Delivered,0,,7.4,4,1,0
+O000114,C04217,2022-08-10,2022,8,Q3,Wednesday,Gaming Mouse RGB,Electronics,130.33,1,130.33,0,0.0,6.99,0,0.0,137.32,UPI / Digital Wallet,Desktop,5,2022-08-15,Delivered,0,3.6,12.8,3,0,1
+O000115,C03724,2020-02-07,2020,2,Q1,Friday,USB-C Hub,Electronics,178.28,2,356.56,0,0.0,3.99,12,42.79,403.34,PayPal,Tablet,3,2020-02-10,Delivered,0,4.4,10.3,12,0,1
+O000116,C04818,2020-02-05,2020,2,Q1,Wednesday,Webcam 4K,Electronics,65.04,1,65.04,0,0.0,6.99,18,11.71,83.74,Credit Card,Desktop,3,2020-02-08,Delivered,0,,7.5,7,1,0
+O000117,C04862,2020-04-06,2020,4,Q2,Monday,Face Wash Gel,Beauty & Personal Care,27.84,2,55.68,0,0.0,6.99,8,4.45,67.12,Credit Card,Tablet,2,2020-04-08,Delivered,0,4.2,6.1,6,0,1
+O000118,C06876,2024-11-14,2024,11,Q4,Thursday,Water Bottle 1L,Sports & Outdoors,56.5,1,56.5,0,0.0,0.0,10,5.65,62.15,PayPal,Mobile,3,2024-11-17,Delivered,0,,7.6,1,1,0
+O000119,C00987,2024-04-21,2024,4,Q2,Sunday,Collagen Peptides,Health & Wellness,27.52,1,27.52,0,0.0,3.99,0,0.0,31.51,Debit Card,Mobile,1,2024-04-22,Delivered,0,,36.5,7,1,0
+O000120,C05828,2026-03-19,2026,3,Q1,Thursday,Portable Charger 20000mAh,Electronics,93.17,1,93.17,0,0.0,3.99,18,16.77,113.93,Debit Card,Mobile,7,2026-03-26,Delivered,0,4.3,38.4,10,1,1
+O000121,C00218,2020-01-12,2020,1,Q1,Sunday,Steering Wheel Cover,Automotive,44.73,1,44.73,0,0.0,0.0,18,8.05,52.78,PayPal,Mobile,3,2020-01-15,Delivered,0,,16.2,17,1,0
+O000122,C07835,2024-07-07,2024,7,Q3,Sunday,Leather Belt,Clothing & Apparel,75.51,1,75.51,0,0.0,0.0,20,15.1,90.61,Credit Card,Mobile,4,2024-07-11,Delivered,0,,16.6,2,0,0
+O000123,C05333,2021-06-23,2021,6,Q2,Wednesday,Probiotics 50B,Health & Wellness,10.89,1,10.89,0,0.0,3.99,18,1.96,16.84,Credit Card,Mobile,4,2021-06-27,Delivered,0,,46.8,4,1,0
+O000124,C05445,2025-04-30,2025,4,Q2,Wednesday,Electric Kettle,Home & Kitchen,53.23,2,106.46,0,0.0,9.99,12,12.78,129.23,Credit Card,Mobile,5,2025-05-05,Delivered,0,4.6,9.2,17,1,1
+O000125,C05122,2025-07-14,2025,7,Q3,Monday,Zero to One,Books,35.72,1,35.72,0,0.0,3.99,10,3.57,43.28,Credit Card,Mobile,1,2025-07-15,Delivered,0,,19.3,15,1,0
+O000126,C06517,2024-03-26,2024,3,Q1,Tuesday,Running Shoes,Clothing & Apparel,21.22,2,42.44,20,8.49,6.99,12,4.07,45.01,Buy Now Pay Later,Mobile,5,2024-03-31,Delivered,0,4.4,27.8,5,1,1
+O000127,C00057,2024-09-12,2024,9,Q3,Thursday,Air Freshener,Automotive,50.4,1,50.4,0,0.0,0.0,10,5.04,55.44,Cryptocurrency,Desktop,3,2024-09-15,Delivered,0,,42.0,3,1,0
+O000128,C05235,2023-10-15,2023,10,Q4,Sunday,Classic White Tee,Clothing & Apparel,95.52,1,95.52,0,0.0,0.0,5,4.78,100.3,UPI / Digital Wallet,Mobile,1,2023-10-16,Delivered,0,3.8,4.8,17,0,1
+O000129,C03160,2026-03-25,2026,3,Q1,Wednesday,Classic White Tee,Clothing & Apparel,72.67,3,218.01,0,0.0,9.99,20,43.6,271.6,Bank Transfer,Tablet,7,2026-04-01,Delivered,0,,15.6,2,0,0
+O000130,C06925,2023-01-10,2023,1,Q1,Tuesday,Ashwagandha Extract,Health & Wellness,26.61,2,53.22,0,0.0,9.99,8,4.26,67.47,Credit Card,Mobile,4,2023-01-14,Returned,1,,24.7,7,1,0
+O000131,C05825,2022-04-15,2022,4,Q2,Friday,Webcam 4K,Electronics,128.72,2,257.44,0,0.0,4.99,10,25.74,288.17,Credit Card,Mobile,3,2022-04-18,Delivered,0,4.6,12.7,5,1,1
+O000132,C06506,2026-03-24,2026,3,Q1,Tuesday,Atomic Habits,Books,26.25,1,26.25,0,0.0,3.99,8,2.1,32.34,PayPal,Mobile,5,2026-03-29,Delivered,0,3.9,4.9,4,1,1
+O000133,C00485,2020-08-31,2020,8,Q3,Monday,Multivitamin Daily,Health & Wellness,10.53,1,10.53,0,0.0,4.99,5,0.53,16.05,Credit Card,Tablet,7,2020-09-07,Delivered,0,4.5,25.9,11,0,1
+O000134,C00883,2021-11-06,2021,11,Q4,Saturday,Notebook A5,Office Supplies,76.56,1,76.56,40,30.62,4.99,18,8.27,59.2,Credit Card,Mobile,3,2021-11-09,Delivered,0,,9.0,4,1,0
+O000135,C05080,2024-02-24,2024,2,Q1,Saturday,Bluetooth Speaker,Electronics,100.66,5,503.3,15,75.5,0.0,10,42.78,470.58,Debit Card,Mobile,3,2024-02-27,Delivered,0,,13.8,1,1,0
+O000136,C00616,2023-03-12,2023,3,Q1,Sunday,Hyaluronic Acid Moisturizer,Beauty & Personal Care,23.15,1,23.15,0,0.0,6.99,0,0.0,30.14,Credit Card,Mobile,4,2023-03-16,Delivered,0,,14.4,11,0,0
+O000137,C01354,2021-11-10,2021,11,Q4,Wednesday,Shower Curtain,Home & Kitchen,45.26,1,45.26,20,9.05,3.99,10,3.62,43.82,Debit Card,Mobile,1,2021-11-11,Delivered,0,,10.6,10,0,0
+O000138,C00937,2021-09-08,2021,9,Q3,Wednesday,Shampoo Argan Oil,Beauty & Personal Care,28.17,1,28.17,10,2.82,3.99,0,0.0,29.34,Debit Card,Mobile,1,2021-09-09,Delivered,0,,19.0,5,0,0
+O000139,C00684,2025-12-16,2025,12,Q4,Tuesday,Hyaluronic Acid Moisturizer,Beauty & Personal Care,20.39,1,20.39,0,0.0,0.0,12,2.45,22.84,Bank Transfer,Mobile,3,2025-12-19,Returned,1,,23.0,3,0,0
+O000140,C01151,2022-08-16,2022,8,Q3,Tuesday,Yoga Mat Non-slip,Sports & Outdoors,66.87,3,200.61,0,0.0,6.99,12,24.07,231.67,PayPal,Tablet,5,2022-08-21,Delivered,0,2.5,4.6,2,0,1
+O000141,C07172,2020-05-25,2020,5,Q2,Monday,Wall Clock Modern,Home & Kitchen,70.69,1,70.69,0,0.0,0.0,12,8.48,79.17,PayPal,Desktop,3,2020-05-28,Delivered,0,4.0,9.0,3,0,1
+O000142,C00796,2023-05-19,2023,5,Q2,Friday,Hair Dryer Pro,Beauty & Personal Care,39.11,1,39.11,0,0.0,4.99,8,3.13,47.23,PayPal,Mobile,5,2023-05-24,Delivered,0,,77.1,8,0,0
+O000143,C07771,2022-07-07,2022,7,Q3,Thursday,Gaming Mouse RGB,Electronics,82.95,1,82.95,0,0.0,4.99,12,9.95,97.89,UPI / Digital Wallet,Mobile,14,2022-07-21,Delivered,0,,91.2,19,1,0
+O000144,C00504,2021-04-09,2021,4,Q2,Friday,Stud Earrings Gold,Jewelry & Accessories,64.77,1,64.77,0,0.0,3.99,10,6.48,75.24,Credit Card,Desktop,4,2021-04-13,Delivered,0,3.4,5.7,11,0,1
+O000145,C05714,2022-07-10,2022,7,Q3,Sunday,The Alchemist,Books,51.12,1,51.12,0,0.0,9.99,8,4.09,65.2,Credit Card,Desktop,1,2022-07-11,Cancelled,0,,13.4,7,1,0
+O000146,C00504,2024-03-13,2024,3,Q1,Wednesday,Water Bottle 1L,Sports & Outdoors,15.6,1,15.6,0,0.0,3.99,20,3.12,22.71,PayPal,Desktop,5,2024-03-18,Delivered,0,,7.6,13,0,0
+O000147,C05445,2020-03-14,2020,3,Q1,Saturday,Ashwagandha Extract,Health & Wellness,28.32,3,84.96,0,0.0,6.99,18,15.29,107.24,PayPal,Mobile,2,2020-03-16,Delivered,0,3.6,14.6,15,1,1
+O000148,C03996,2022-11-05,2022,11,Q4,Saturday,Jump Rope Speed,Sports & Outdoors,27.68,1,27.68,5,1.38,0.0,10,2.63,28.93,UPI / Digital Wallet,Desktop,3,2022-11-08,Delivered,0,,3.1,1,1,0
+O000149,C04265,2021-03-15,2021,3,Q1,Monday,Collagen Peptides,Health & Wellness,18.02,1,18.02,20,3.6,4.99,8,1.15,20.56,Credit Card,Mobile,7,2021-03-22,Delivered,0,4.3,14.0,9,1,1
+O000150,C07391,2021-08-24,2021,8,Q3,Tuesday,The Lean Startup,Books,37.44,1,37.44,20,7.49,4.99,18,5.39,40.33,PayPal,Mobile,2,2021-08-26,Processing,0,,4.3,18,0,0
+O000151,C04520,2024-09-28,2024,9,Q3,Saturday,Hair Dryer Pro,Beauty & Personal Care,43.38,2,86.76,5,4.34,6.99,12,9.89,99.3,Debit Card,Mobile,3,2024-10-01,Delivered,0,,9.3,1,1,0
+O000152,C05686,2025-08-01,2025,8,Q3,Friday,Art Supply Kit,Toys & Games,35.35,3,106.05,15,15.91,3.99,12,10.82,104.95,Credit Card,Mobile,5,2025-08-06,Delivered,0,3.9,23.5,2,0,1
+O000153,C07361,2021-09-21,2021,9,Q3,Tuesday,Winter Jacket,Clothing & Apparel,36.65,2,73.3,20,14.66,4.99,20,11.73,75.36,UPI / Digital Wallet,Desktop,4,2021-09-25,Delivered,0,,13.0,13,1,0
+O000154,C01599,2025-04-20,2025,4,Q2,Sunday,Wall Clock Modern,Home & Kitchen,183.4,1,183.4,10,18.34,3.99,18,29.71,198.76,Credit Card,Mobile,2,2025-04-22,Returned,1,,13.7,4,0,0
+O000155,C06440,2021-08-06,2021,8,Q3,Friday,USB-C Hub,Electronics,49.6,1,49.6,0,0.0,4.99,0,0.0,54.59,PayPal,Mobile,1,2021-08-07,Returned,1,,5.2,4,1,0
+O000156,C06594,2022-07-19,2022,7,Q3,Tuesday,Smart Plug 4-Pack,Electronics,144.81,2,289.62,15,43.44,0.0,20,49.24,295.42,Debit Card,Tablet,1,2022-07-20,Delivered,0,3.9,41.0,7,1,1
+O000157,C04923,2021-01-07,2021,1,Q1,Thursday,Action Figure Set,Toys & Games,41.35,1,41.35,0,0.0,0.0,18,7.44,48.79,Credit Card,Mobile,3,2021-01-10,Delivered,0,,5.8,4,1,0
+O000158,C02673,2024-02-14,2024,2,Q1,Wednesday,Formal Dress Shirt,Clothing & Apparel,31.36,1,31.36,0,0.0,4.99,20,6.27,42.62,Credit Card,Desktop,4,2024-02-18,Delivered,0,4.7,8.9,7,0,1
+O000159,C01457,2022-02-22,2022,2,Q1,Tuesday,Vitamin C Serum,Beauty & Personal Care,37.86,1,37.86,0,0.0,0.0,20,7.57,45.43,Buy Now Pay Later,Mobile,10,2022-03-04,Delivered,0,,16.2,1,0,0
+O000160,C03979,2024-11-18,2024,11,Q4,Monday,Shower Curtain,Home & Kitchen,93.58,1,93.58,15,14.04,3.99,0,0.0,83.53,Debit Card,Desktop,5,2024-11-23,Delivered,0,4.7,24.6,1,1,1
+O000161,C01798,2021-06-23,2021,6,Q2,Wednesday,The Lean Startup,Books,26.36,5,131.8,0,0.0,4.99,8,10.54,147.33,Cryptocurrency,Mobile,3,2021-06-26,Delivered,0,4.1,16.5,4,1,1
+O000162,C07825,2022-03-13,2022,3,Q1,Sunday,Formal Dress Shirt,Clothing & Apparel,43.0,1,43.0,0,0.0,9.99,10,4.3,57.29,Bank Transfer,Mobile,7,2022-03-20,Delivered,0,,4.4,7,1,0
+O000163,C05781,2020-07-30,2020,7,Q3,Thursday,Gaming Mouse RGB,Electronics,99.45,1,99.45,0,0.0,9.99,18,17.9,127.34,Bank Transfer,Desktop,5,2020-08-04,Delivered,0,,12.0,17,1,0
+O000164,C04358,2021-09-10,2021,9,Q3,Friday,"Hardshell Luggage 24""",Travel & Luggage,79.86,1,79.86,0,0.0,0.0,12,9.58,89.44,Credit Card,Mobile,5,2021-09-15,Delivered,0,3.9,16.4,18,1,1
+O000165,C07190,2025-07-11,2025,7,Q3,Friday,Winter Jacket,Clothing & Apparel,32.84,1,32.84,0,0.0,0.0,20,6.57,39.41,Credit Card,Desktop,5,2025-07-16,Delivered,0,4.0,13.4,10,1,1
+O000166,C03049,2023-04-29,2023,4,Q2,Saturday,Face Wash Gel,Beauty & Personal Care,51.0,1,51.0,0,0.0,6.99,0,0.0,57.99,Credit Card,Tablet,10,2023-05-09,Delivered,0,,2.3,1,1,0
+O000167,C04613,2020-09-13,2020,9,Q3,Sunday,Knife Set 8pc,Home & Kitchen,73.06,1,73.06,0,0.0,0.0,5,3.65,76.71,PayPal,Desktop,5,2020-09-18,Delivered,0,,11.7,6,0,0
+O000168,C05746,2022-02-28,2022,2,Q1,Monday,Bluetooth Speaker,Electronics,43.25,1,43.25,40,17.3,4.99,18,4.67,35.61,Debit Card,Mobile,2,2022-03-02,Delivered,0,,9.8,3,1,0
+O000169,C04181,2021-12-15,2021,12,Q4,Wednesday,Wireless Earbuds Pro,Electronics,71.98,1,71.98,0,0.0,3.99,0,0.0,75.97,UPI / Digital Wallet,Desktop,5,2021-12-20,Delivered,0,4.7,19.0,6,0,1
+O000170,C05646,2020-05-27,2020,5,Q2,Wednesday,Pull-up Bar,Sports & Outdoors,91.66,1,91.66,25,22.92,3.99,8,5.5,78.23,Debit Card,Mobile,4,2020-05-31,Delivered,0,,6.2,4,1,0
+O000171,C04857,2025-05-06,2025,5,Q2,Tuesday,Car Phone Mount,Automotive,64.25,2,128.5,10,12.85,4.99,10,11.56,132.2,Debit Card,Mobile,3,2025-05-09,Processing,0,,9.7,3,1,0
+O000172,C03007,2023-01-30,2023,1,Q1,Monday,Slim Fit Jeans,Clothing & Apparel,64.55,1,64.55,0,0.0,0.0,0,0.0,64.55,PayPal,Desktop,1,2023-01-31,Delivered,0,3.9,5.6,6,1,1
+O000173,C01308,2021-06-27,2021,6,Q2,Sunday,Chew Toy Set,Pet Supplies,23.93,1,23.93,5,1.2,6.99,0,0.0,29.72,PayPal,Mobile,3,2021-06-30,Delivered,0,,19.3,6,1,0
+O000174,C03154,2022-09-23,2022,9,Q3,Friday,Portable Charger 20000mAh,Electronics,161.44,3,484.32,10,48.43,0.0,8,34.87,470.76,Credit Card,Desktop,3,2022-09-26,Delivered,0,4.4,13.0,6,1,1
+O000175,C04496,2021-01-12,2021,1,Q1,Tuesday,Storage Containers,Home & Kitchen,120.92,1,120.92,0,0.0,9.99,20,24.18,155.09,PayPal,Mobile,2,2021-01-14,Cancelled,0,,6.3,4,1,0
+O000176,C01816,2021-10-08,2021,10,Q4,Friday,Dog Food Premium 5kg,Pet Supplies,17.56,1,17.56,40,7.02,4.99,12,1.26,16.79,UPI / Digital Wallet,Mobile,7,2021-10-15,Delivered,0,3.3,1.5,2,1,1
+O000177,C00099,2022-06-01,2022,6,Q2,Wednesday,Atomic Habits,Books,21.98,3,65.94,0,0.0,0.0,0,0.0,65.94,Credit Card,Mobile,3,2022-06-04,Cancelled,0,,10.4,1,0,0
+O000178,C01512,2022-04-19,2022,4,Q2,Tuesday,LED Desk Lamp,Electronics,65.8,1,65.8,0,0.0,3.99,10,6.58,76.37,Buy Now Pay Later,Desktop,5,2022-04-24,Delivered,0,,12.0,6,0,0
+O000179,C00815,2022-07-18,2022,7,Q3,Monday,Portable Charger 20000mAh,Electronics,96.34,3,289.02,5,14.45,6.99,0,0.0,281.56,Buy Now Pay Later,Mobile,4,2022-07-22,Delivered,0,4.6,5.4,6,1,1
+O000180,C02219,2025-09-03,2025,9,Q3,Wednesday,Portable Charger 20000mAh,Electronics,235.24,1,235.24,0,0.0,4.99,20,47.05,287.28,Debit Card,Desktop,3,2025-09-06,Returned,1,,4.8,6,1,0
+O000181,C04462,2023-11-27,2023,11,Q4,Monday,Clean Code,Books,47.18,1,47.18,0,0.0,0.0,5,2.36,49.54,Credit Card,Tablet,4,2023-12-01,Delivered,0,3.8,4.1,8,1,1
+O000182,C05109,2023-01-03,2023,1,Q1,Tuesday,Organic Green Tea,Food & Grocery,23.57,1,23.57,30,7.07,3.99,18,2.97,23.46,Credit Card,Mobile,4,2023-01-07,Delivered,0,,26.6,4,0,0
+O000183,C01698,2021-01-31,2021,1,Q1,Sunday,Portable Charger 20000mAh,Electronics,72.63,1,72.63,0,0.0,0.0,18,13.07,85.7,Buy Now Pay Later,Desktop,5,2021-02-05,Delivered,0,4.5,10.7,3,0,1
+O000184,C06929,2022-01-17,2022,1,Q1,Monday,Non-stick Pan,Home & Kitchen,67.51,2,135.02,0,0.0,0.0,0,0.0,135.02,Credit Card,Mobile,1,2022-01-18,Cancelled,0,,8.6,21,1,0
+O000185,C05390,2025-06-17,2025,6,Q2,Tuesday,Face Wash Gel,Beauty & Personal Care,25.06,3,75.18,0,0.0,4.99,12,9.02,89.19,Cryptocurrency,Mobile,5,2025-06-22,Delivered,0,3.6,20.5,7,0,1
+O000186,C07567,2020-08-18,2020,8,Q3,Tuesday,Electric Toothbrush,Beauty & Personal Care,58.6,1,58.6,0,0.0,4.99,12,7.03,70.62,PayPal,Mobile,5,2020-08-23,Returned,1,,11.5,5,1,0
+O000187,C06112,2020-01-09,2020,1,Q1,Thursday,Casual Sneakers,Clothing & Apparel,56.9,1,56.9,0,0.0,4.99,0,0.0,61.89,Credit Card,Mobile,2,2020-01-11,Delivered,0,,16.4,1,0,0
+O000188,C06219,2020-12-03,2020,12,Q4,Thursday,Electric Toothbrush,Beauty & Personal Care,37.42,2,74.84,0,0.0,3.99,8,5.99,84.82,UPI / Digital Wallet,Tablet,7,2020-12-10,Cancelled,0,,3.1,8,1,0
+O000189,C02011,2022-10-24,2022,10,Q4,Monday,Casual Sneakers,Clothing & Apparel,93.29,2,186.58,10,18.66,4.99,0,0.0,172.91,PayPal,Mobile,10,2022-11-03,Delivered,0,2.7,8.7,12,1,1
+O000190,C07549,2022-01-15,2022,1,Q1,Saturday,Hoodie Pullover,Clothing & Apparel,123.93,1,123.93,0,0.0,4.99,10,12.39,141.31,Credit Card,Mobile,2,2022-01-17,Delivered,0,,14.0,6,1,0
+O000191,C02459,2020-09-24,2020,9,Q3,Thursday,LED Desk Lamp,Electronics,159.92,4,639.68,0,0.0,9.99,0,0.0,649.67,UPI / Digital Wallet,Desktop,3,2020-09-27,Delivered,0,,19.8,18,1,0
+O000192,C04184,2022-02-20,2022,2,Q1,Sunday,Vitamin C Serum,Beauty & Personal Care,30.35,1,30.35,0,0.0,6.99,10,3.04,40.38,Credit Card,Mobile,3,2022-02-23,Processing,0,,20.8,1,0,0
+O000193,C04493,2023-04-01,2023,4,Q2,Saturday,Travel Adapter Universal,Travel & Luggage,56.01,1,56.01,0,0.0,4.99,0,0.0,61.0,Credit Card,Mobile,5,2023-04-06,Delivered,0,4.5,13.5,9,1,1
+O000194,C01047,2023-12-25,2023,12,Q4,Monday,Webcam 4K,Electronics,151.96,1,151.96,0,0.0,4.99,10,15.2,172.15,Buy Now Pay Later,Mobile,4,2023-12-29,Delivered,0,,10.4,10,1,0
+O000195,C02363,2023-02-03,2023,2,Q1,Friday,Zero to One,Books,24.29,1,24.29,0,0.0,9.99,0,0.0,34.28,UPI / Digital Wallet,Mobile,4,2023-02-07,Delivered,0,3.6,14.9,15,1,1
+O000196,C01416,2021-07-07,2021,7,Q3,Wednesday,Hyaluronic Acid Moisturizer,Beauty & Personal Care,21.78,2,43.56,20,8.71,6.99,18,6.27,48.11,Debit Card,Desktop,3,2021-07-10,Cancelled,0,,5.6,2,1,0
+O000197,C02332,2021-07-24,2021,7,Q3,Saturday,Winter Jacket,Clothing & Apparel,39.99,5,199.95,10,20.0,4.99,0,0.0,184.94,Credit Card,Mobile,7,2021-07-31,Delivered,0,,8.1,6,0,0
+O000198,C02196,2020-05-17,2020,5,Q2,Sunday,Puzzle 1000pc,Toys & Games,51.27,1,51.27,0,0.0,0.0,18,9.23,60.5,Bank Transfer,Mobile,4,2020-05-21,Delivered,0,,3.3,1,1,0
+O000199,C07173,2024-04-29,2024,4,Q2,Monday,Resistance Bands Set,Sports & Outdoors,71.44,3,214.32,0,0.0,3.99,20,42.86,261.17,UPI / Digital Wallet,Desktop,4,2024-05-03,Returned,1,,6.7,1,0,0
+O000200,C06867,2020-10-22,2020,10,Q4,Thursday,Smart Watch Series 5,Electronics,76.77,3,230.31,0,0.0,6.99,18,41.46,278.76,Credit Card,Mobile,7,2020-10-29,Delivered,0,4.3,6.1,1,0,1
+O000201,C06183,2020-04-07,2020,4,Q2,Tuesday,Storage Containers,Home & Kitchen,110.94,1,110.94,15,16.64,4.99,18,16.97,116.26,Credit Card,Desktop,4,2020-04-11,Delivered,0,,16.7,14,1,0
+O000202,C05524,2025-07-04,2025,7,Q3,Friday,Slim Fit Jeans,Clothing & Apparel,47.2,3,141.6,15,21.24,3.99,18,21.66,146.01,Debit Card,Tablet,2,2025-07-06,Delivered,0,,4.7,1,0,0
+O000203,C07180,2022-06-02,2022,6,Q2,Thursday,Winter Jacket,Clothing & Apparel,57.68,1,57.68,0,0.0,3.99,20,11.54,73.21,PayPal,Desktop,10,2022-06-12,Delivered,0,4.1,15.5,9,0,1
+O000204,C00830,2021-08-23,2021,8,Q3,Monday,System Design Interview,Books,25.38,2,50.76,25,12.69,4.99,0,0.0,43.06,PayPal,Mobile,5,2021-08-28,Delivered,0,,2.8,2,0,0
+O000205,C03612,2022-08-14,2022,8,Q3,Sunday,Matcha Powder,Food & Grocery,9.35,1,9.35,0,0.0,0.0,18,1.68,11.03,Credit Card,Desktop,7,2022-08-21,Delivered,0,3.0,26.0,6,1,1
+O000206,C07303,2023-03-30,2023,3,Q1,Thursday,Portable Charger 20000mAh,Electronics,202.34,1,202.34,10,20.23,0.0,0,0.0,182.11,UPI / Digital Wallet,Desktop,5,2023-04-04,Delivered,0,,11.4,4,1,0
+O000207,C04282,2025-10-05,2025,10,Q4,Sunday,Smart Plug 4-Pack,Electronics,183.51,1,183.51,0,0.0,0.0,20,36.7,220.21,Credit Card,Desktop,5,2025-10-10,Cancelled,0,,28.3,1,1,0
+O000208,C05389,2024-04-30,2024,4,Q2,Tuesday,Whiteboard Markers,Office Supplies,80.69,1,80.69,15,12.1,0.0,8,5.49,74.08,Credit Card,Desktop,3,2024-05-03,Delivered,0,,35.2,1,1,0
+O000209,C01797,2024-06-05,2024,6,Q2,Wednesday,Formal Dress Shirt,Clothing & Apparel,57.35,2,114.7,10,11.47,0.0,12,12.39,115.62,Credit Card,Desktop,3,2024-06-08,Delivered,0,2.3,5.9,5,0,1
+O000210,C00525,2024-02-22,2024,2,Q1,Thursday,Portable Charger 20000mAh,Electronics,168.08,1,168.08,0,0.0,3.99,20,33.62,205.69,PayPal,Mobile,3,2024-02-25,Delivered,0,4.2,14.6,1,0,1
+O000211,C07533,2022-08-21,2022,8,Q3,Sunday,Wireless Mouse,Office Supplies,77.32,1,77.32,0,0.0,3.99,10,7.73,89.04,Buy Now Pay Later,Mobile,5,2022-08-26,Delivered,0,,31.8,1,1,0
+O000212,C07696,2022-08-05,2022,8,Q3,Friday,Sports Socks 6-Pack,Clothing & Apparel,47.08,1,47.08,0,0.0,4.99,0,0.0,52.07,Credit Card,Mobile,1,2022-08-06,Delivered,0,,22.0,3,1,0
+O000213,C06445,2020-06-05,2020,6,Q2,Friday,Resistance Bands Set,Sports & Outdoors,32.33,2,64.66,0,0.0,6.99,12,7.76,79.41,Credit Card,Desktop,10,2020-06-15,Delivered,0,,26.0,5,0,0
+O000214,C07731,2023-01-20,2023,1,Q1,Friday,Classic White Tee,Clothing & Apparel,40.11,1,40.11,0,0.0,0.0,20,8.02,48.13,Credit Card,Desktop,2,2023-01-22,Delivered,0,3.4,18.6,4,0,1
+O000215,C05696,2020-04-23,2020,4,Q2,Thursday,Bluetooth Speaker,Electronics,76.89,2,153.78,0,0.0,9.99,20,30.76,194.53,Credit Card,Desktop,3,2020-04-26,Delivered,0,,8.7,5,1,0
+O000216,C04531,2022-02-11,2022,2,Q1,Friday,Portable Charger 20000mAh,Electronics,93.83,1,93.83,15,14.07,0.0,18,14.36,94.12,Cryptocurrency,Desktop,3,2022-02-14,Delivered,0,,10.0,13,1,0
+O000217,C05358,2021-10-26,2021,10,Q4,Tuesday,Stuffed Animal Bear,Toys & Games,23.43,1,23.43,0,0.0,3.99,8,1.87,29.29,Credit Card,Mobile,4,2021-10-30,Delivered,0,,9.0,14,1,0
+O000218,C01972,2024-07-16,2024,7,Q3,Tuesday,Smart Plug 4-Pack,Electronics,116.41,1,116.41,5,5.82,0.0,20,22.12,132.71,Credit Card,Desktop,3,2024-07-19,Cancelled,0,,9.8,16,0,0
+O000219,C03721,2023-09-22,2023,9,Q3,Friday,Resistance Bands Set,Sports & Outdoors,40.0,2,80.0,15,12.0,9.99,12,8.16,86.15,Debit Card,Mobile,3,2023-09-25,Delivered,0,,8.7,4,1,0
+O000220,C04708,2025-03-14,2025,3,Q1,Friday,LEGO City Set,Toys & Games,46.41,2,92.82,0,0.0,0.0,20,18.56,111.38,Credit Card,Desktop,2,2025-03-16,Delivered,0,,12.8,5,1,0
+O000221,C02079,2024-01-22,2024,1,Q1,Monday,Slim Fit Jeans,Clothing & Apparel,27.97,1,27.97,0,0.0,9.99,18,5.03,42.99,Credit Card,Mobile,3,2024-01-25,Delivered,0,,11.2,7,0,0
+O000222,C03578,2021-08-04,2021,8,Q3,Wednesday,Face Wash Gel,Beauty & Personal Care,26.79,1,26.79,0,0.0,4.99,10,2.68,34.46,PayPal,Mobile,3,2021-08-07,Delivered,0,,20.9,4,1,0
+O000223,C00565,2020-01-05,2020,1,Q1,Sunday,Classic White Tee,Clothing & Apparel,37.19,2,74.38,0,0.0,6.99,10,7.44,88.81,Credit Card,Mobile,10,2020-01-15,Delivered,0,4.1,10.1,4,1,1
+O000224,C04782,2022-06-06,2022,6,Q2,Monday,Outdoor Frisbee,Toys & Games,86.08,2,172.16,30,51.65,4.99,5,6.03,131.53,Credit Card,Desktop,2,2022-06-08,Delivered,0,4.2,17.6,6,0,1
+O000225,C05700,2022-10-17,2022,10,Q4,Monday,Non-stick Pan,Home & Kitchen,62.32,3,186.96,0,0.0,3.99,20,37.39,228.34,Debit Card,Desktop,10,2022-10-27,Delivered,0,,4.2,1,0,0
+O000226,C05997,2020-08-20,2020,8,Q3,Thursday,LEGO City Set,Toys & Games,35.57,1,35.57,0,0.0,0.0,8,2.85,38.42,Credit Card,Mobile,2,2020-08-22,Delivered,0,,5.6,1,1,0
+O000227,C02954,2023-07-22,2023,7,Q3,Saturday,Casual Sneakers,Clothing & Apparel,67.93,1,67.93,0,0.0,4.99,18,12.23,85.15,PayPal,Mobile,7,2023-07-29,Delivered,0,4.2,2.7,13,1,1
+O000228,C03907,2023-12-05,2023,12,Q4,Tuesday,Protein Powder Vanilla,Food & Grocery,51.88,1,51.88,0,0.0,6.99,8,4.15,63.02,UPI / Digital Wallet,Desktop,3,2023-12-08,Delivered,0,,76.3,4,0,0
+O000229,C04659,2021-05-27,2021,5,Q2,Thursday,Bluetooth Speaker,Electronics,169.67,1,169.67,0,0.0,4.99,5,8.48,183.14,Credit Card,Mobile,4,2021-05-31,Delivered,0,3.6,5.5,7,1,1
+O000230,C00535,2026-02-11,2026,2,Q1,Wednesday,Storage Containers,Home & Kitchen,50.64,1,50.64,30,15.19,6.99,12,4.25,46.69,UPI / Digital Wallet,Desktop,5,2026-02-16,Returned,1,,7.7,9,1,0
+O000231,C05957,2024-10-21,2024,10,Q4,Monday,Classic White Tee,Clothing & Apparel,101.99,1,101.99,10,10.2,4.99,0,0.0,96.78,Buy Now Pay Later,Desktop,1,2024-10-22,Delivered,0,,5.4,4,1,0
+O000232,C07169,2020-07-18,2020,7,Q3,Saturday,Hoodie Pullover,Clothing & Apparel,43.83,1,43.83,0,0.0,6.99,12,5.26,56.08,Credit Card,Mobile,4,2020-07-22,Delivered,0,,44.1,8,0,0
+O000233,C07821,2021-08-24,2021,8,Q3,Tuesday,Collagen Peptides,Health & Wellness,8.56,4,34.24,0,0.0,0.0,20,6.85,41.09,Credit Card,Tablet,5,2021-08-29,Delivered,0,,7.9,1,1,0
+O000234,C05763,2026-02-18,2026,2,Q1,Wednesday,Classic White Tee,Clothing & Apparel,58.51,1,58.51,15,8.78,9.99,10,4.97,64.69,PayPal,Tablet,3,2026-02-21,Cancelled,0,,18.5,17,0,0
+O000235,C03358,2021-02-26,2021,2,Q1,Friday,Dashcam 4K,Automotive,37.59,4,150.36,0,0.0,3.99,18,27.06,181.41,Credit Card,Desktop,2,2021-02-28,Delivered,0,4.9,11.3,4,1,1
