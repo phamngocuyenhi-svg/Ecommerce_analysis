@@ -1,0 +1,5 @@
+﻿test,variable,statistic,p_value
+Spearman rho,Quantity,-0.008277,0.190637
+Spearman rho,Amount,-0.105711,0.0
+Kruskal-Wallis H,Quantity,2.623608,0.622647
+Kruskal-Wallis H,Amount,392.490132,0.0

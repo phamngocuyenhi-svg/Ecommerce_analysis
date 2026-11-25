@@ -1,0 +1,11 @@
+﻿rank,customer_id,country,membership_tier,total_orders,total_spend_usd,churned
+1,C04432,United States,Platinum,67,61282.48,0
+2,C00059,United States,Free,58,39377.86,1
+3,C04988,India,Gold,55,29317.45,0
+4,C05131,United States,Free,79,27252.84,0
+5,C00263,Germany,Silver,71,25995.03,0
+6,C05239,United Kingdom,Gold,36,25953.79,0
+7,C01139,United States,Gold,54,24396.89,0
+8,C05337,India,Gold,38,24118.18,0
+9,C01972,Mexico,Platinum,41,23959.99,0
+10,C04901,United States,Silver,35,22774.9,1

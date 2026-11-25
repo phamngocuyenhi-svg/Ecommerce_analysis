@@ -1,0 +1,15 @@
+﻿category,rank,revenue_usd,orders,avg_order_value_usd,share_pct,cum_share_pct
+Electronics,1,949184.3,3716,255.43,36.72,36.72
+Clothing & Apparel,2,375528.98,3290,114.14,14.53,51.24
+Home & Kitchen,3,354657.99,2480,143.01,13.72,64.96
+Sports & Outdoors,4,133145.44,1460,91.2,5.15,70.11
+Jewelry & Accessories,5,121346.55,796,152.45,4.69,74.81
+Office Supplies,6,107213.66,633,169.37,4.15,78.95
+Toys & Games,7,94991.49,1252,75.87,3.67,82.63
+Beauty & Personal Care,8,83214.79,1401,59.4,3.22,85.85
+Books,9,79412.54,1618,49.08,3.07,88.92
+Automotive,10,79174.86,633,125.08,3.06,91.98
+Travel & Luggage,11,73622.29,417,176.55,2.85,94.83
+Food & Grocery,12,48724.03,1208,40.33,1.88,96.72
+Health & Wellness,13,48713.31,998,48.81,1.88,98.6
+Pet Supplies,14,36196.27,595,60.83,1.4,100.0

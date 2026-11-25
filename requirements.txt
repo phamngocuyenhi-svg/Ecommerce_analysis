@@ -1,9 +1,24 @@
-# Requirements for Data Cleaning & Preparation Project
-pandas>=2.0.0
-numpy>=1.24.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-jupyter>=1.0.0
-nbformat>=5.9.0
-nbclient>=0.8.0
-ipykernel>=6.20.0
+# Ecommerce_analysis - thư viện cần thiết
+# Viết cho Python 3.10 trở lên (đã kiểm tra trên Python 3.12).
+# Cài đặt:  pip install -r requirements.txt
+
+# --- Xử lý và phân tích dữ liệu ---
+pandas>=2.1
+numpy>=1.26
+scipy>=1.11
+
+# --- Biểu đồ trong notebooks/ (ảnh tĩnh) ---
+matplotlib>=3.9      # Câu 6 dùng tham số tick_labels, cần từ 3.9 trở lên
+seaborn>=0.13
+
+# --- Biểu đồ tương tác và dashboard ---
+plotly>=6.0
+dash>=2.14           # dashboards/plotly_app/app.py (bộ lọc chéo cần allow_duplicate, có từ Dash 2.9)
+
+# --- Chạy notebook ---
+jupyterlab>=4.0
+ipykernel>=6.25
+nbformat>=5.9        # notebook Câu 6 hiển thị Plotly cần nbformat
+
+# --- Tùy chọn: xuất biểu đồ Plotly ra ảnh PNG (cần cài thêm trình duyệt Chrome) ---
+# kaleido>=1.0
