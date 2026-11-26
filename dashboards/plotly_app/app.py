@@ -33,14 +33,13 @@ from src.config import PALETTE as P  # noqa: E402
 log = logging.getLogger("ecommerce_dashboard")
 
 # ======================================================================
-# 1. DỮ LIỆU (đọc một lần khi khởi động)
+# 1. DỮ LIỆU (đọc một lần khi khởi động — có lọc NaN an toàn)
 # ======================================================================
 _DATA = dp.load_all()
 CUSTOMERS = _DATA["customers"]
 FACT = dp.build_fact_orders(_DATA["orders"], CUSTOMERS)
 
-
-YEARS = sorted(FACT[O.YEAR].unique().tolist())
+YEARS = sorted(FACT[O.YEAR].dropna().unique().tolist())
 COUNTRIES = sorted(CUSTOMERS[C.COUNTRY].dropna().astype(str).unique())
 CATEGORIES = sorted(FACT[O.CATEGORY].dropna().astype(str).unique())
 CHANNELS = sorted(CUSTOMERS[C.ACQUISITION_CHANNEL].dropna().astype(str).unique())
@@ -91,17 +90,20 @@ def safe(builder, *args, **kwargs):
 FONT = cfg.FONT_FAMILY
 CARD = {"background": "white", "border": f"1px solid {P['grid']}", "borderRadius": "8px", "padding": "10px 14px"}
 GRID = {"display": "grid", "gridTemplateColumns": "repeat(auto-fit, minmax(520px, 1fr))", "gap": "14px", "marginTop": "14px"}
-NOTE = {"color": P["text_muted"], "fontSize": "12px", "margin": "2px 0 0 0"}
+NOTE = {"color": P["text_muted"], "fontSize": "12px", "margin": "4px 0 0 0"}
 
 
-def card(title: str, graph_id: str, note: str | None = None, full: bool = False) -> html.Div:
+def card(title: str, graph_id: str, note: str | None = None, full: bool = False, show_title: bool = False) -> html.Div:
+    """Thẻ chứa một biểu đồ. Tiêu đề và subtitle nằm trong chính biểu đồ; chỉ hiện tiêu đề ngoài khi biểu đồ không có (thẻ KPI)."""
     style = dict(CARD)
     if full:
         style["gridColumn"] = "1 / -1"
-    children = [html.H4(title, style={"margin": "0 0 4px 0", "color": P["primary"], "fontSize": "15px"})]
+    children = []
+    if show_title:
+        children.append(html.H4(title, style={"margin": "0 0 4px 0", "color": P["primary"], "fontSize": "15px"}))
+    children.append(dcc.Graph(id=graph_id, config={"displaylogo": False}))
     if note:
         children.append(html.P(note, style=NOTE))
-    children.append(dcc.Graph(id=graph_id, config={"displaylogo": False}))
     return html.Div(children, style=style)
 
 
@@ -130,13 +132,17 @@ def html_table(df: pd.DataFrame, headers: dict[str, str], formats: dict[str, str
 
 
 def dropdown(component_id: str, options: list, placeholder: str) -> dcc.Dropdown:
-    return dcc.Dropdown(id=component_id, options=options, value=[], multi=True, placeholder=placeholder,
-                        style={"fontSize": "13px", "minWidth": "190px"})
+    return dcc.Dropdown(
+        id=component_id, options=options, value=[], multi=True, placeholder=placeholder,
+        style={"fontSize": "13px", "minWidth": "190px"}
+    )
 
 
 def filter_box(label_text: str, component) -> html.Div:
-    return html.Div([html.Label(label_text, style={"fontSize": "12px", "color": P["text_muted"], "fontWeight": 600}), component],
-                    style={"flex": "1 1 190px"})
+    return html.Div(
+        [html.Label(label_text, style={"fontSize": "12px", "color": P["text_muted"], "fontWeight": 600}), component],
+        style={"flex": "1 1 190px"}
+    )
 
 
 app = Dash(__name__, title="Ecommerce Analysis Dashboard", suppress_callback_exceptions=False)
@@ -160,46 +166,47 @@ filters_bar = html.Div(
 )
 
 tab_overview = html.Div([
-    card("Chỉ số tổng quan", "g-kpi", "Tất cả đơn hàng (mọi trạng thái), theo bộ lọc.", full=True),
-    card("Doanh thu theo tháng và xu hướng", "g-trend", "Chỉ đơn Delivered. Kéo thanh trượt phía dưới để phóng to khoảng thời gian.", full=True),
-    card("Tính thời vụ", "g-season", f"Doanh thu Delivered trung bình theo tháng, năm {cfg.SEASONALITY_YEARS[0]}–{cfg.SEASONALITY_YEARS[1]}."),
-    card("Doanh thu thuần theo nhóm hàng", "g-catnet", "Loại đơn Cancelled và Returned."),
+    card("Chỉ số tổng quan", "g-kpi", "Tất cả đơn hàng (mọi trạng thái), theo bộ lọc.", full=True, show_title=True),
+    card("Doanh thu theo tháng", "g-trend", full=True),
+    card("Tính thời vụ", "g-season"),
+    card("Doanh thu thuần theo nhóm hàng", "g-catnet"),
 ], style=GRID)
 
 tab_revenue = html.Div([
-    card("Top 10 quốc gia theo doanh thu", "g-pareto-country", "Chỉ đơn Delivered. Bấm vào cột để lọc theo quốc gia."),
-    card("Top 10 nhóm hàng theo doanh thu", "g-pareto-category", "Chỉ đơn Delivered. Bấm vào cột để lọc theo nhóm hàng."),
-    card("Tỷ trọng doanh thu theo quốc gia và nhóm hàng", "g-heat-rev",
-         "Top 10 quốc gia × Top 10 nhóm hàng, tỷ trọng tính trong tổng doanh thu của quốc gia. Bấm vào ô để lọc cả hai.", full=True),
+    card("Top 10 quốc gia", "g-pareto-country", "Bấm vào cột để lọc theo quốc gia."),
+    card("Top 10 nhóm hàng", "g-pareto-category", "Bấm vào cột để lọc theo nhóm hàng."),
+    card("Tỷ trọng doanh thu", "g-heat-rev",
+         "Top 10 quốc gia × Top 10 nhóm hàng, tỷ trọng tính trong tổng doanh thu của quốc gia. Bấm vào ô để lọc cả quốc gia và nhóm hàng.", full=True),
 ], style=GRID)
 
 tab_customers = html.Div([
     html.P("Các chỉ số tỷ lệ rời bỏ và Top khách hàng tính trên bảng khách hàng nên chỉ chịu tác động của bộ lọc quốc gia, kênh và hạng thành viên "
            "(không phụ thuộc năm và nhóm hàng). Frequency/Monetary tính từ đơn hàng đã lọc, loại Cancelled và Returned.",
            style={**NOTE, "gridColumn": "1 / -1"}),
-    card("Tỷ lệ rời bỏ theo kênh thu hút", "g-churn-channel", "Bấm vào cột để lọc theo kênh."),
-    card("Tỷ lệ rời bỏ theo số ngày chưa mua", "g-churn-recency", "Cột đỏ: cao hơn 2 lần mặt bằng chung."),
-    card("Tỷ lệ rời bỏ theo số đơn đã mua", "g-churn-orders", "Cột đỏ: cao hơn 2 lần mặt bằng chung."),
-    html.Div([card("Top 10 khách chi tiêu cao nhất", "g-top-customers", "Cột đỏ: khách đã rời bỏ."),
+    html.Div([card("Rời bỏ theo kênh", "g-churn-channel", "Bấm vào cột để lọc theo kênh."),
+              html.Div(id="txt-churn-test", style={**NOTE, "padding": "0 14px 8px"})]),
+    card("Rời bỏ theo số ngày chưa mua", "g-churn-recency"),
+    card("Rời bỏ theo số đơn đã mua", "g-churn-orders"),
+    html.Div([card("Top 10 khách chi tiêu cao nhất", "g-top-customers"),
               html.Div(id="txt-top-summary", style={**NOTE, "padding": "6px 14px"})]),
-    card("Phân phối Frequency", "g-hist-freq", "Số đơn hàng mỗi khách."),
-    card("Phân phối Monetary", "g-hist-mon", "Tổng chi tiêu mỗi khách (thang gốc)."),
-    card("Phân phối log1p(Monetary)", "g-hist-mon-log", "Biến đổi ln(1 + Monetary) giúp thấy rõ hình dạng phân phối khi co đuôi phải."),
-    card("Mức độ tập trung doanh thu", "g-concentration", "Tỷ trọng Monetary của nhóm khách chi tiêu cao nhất."),
+    card("Phân phối Frequency", "g-hist-freq"),
+    card("Phân phối Monetary", "g-hist-mon"),
+    card("Phân phối Monetary (log)", "g-hist-mon-log"),
+    card("Mức độ tập trung doanh thu", "g-concentration"),
 ], style=GRID)
 
 tab_operations = html.Div([
-    card("Chi phí và thời gian vận chuyển theo quốc gia", "g-ship", "Tất cả đơn hàng.", full=True),
-    card("Hoàn trả và rating theo nhóm hàng", "g-catperf", "Tất cả đơn hàng; rating chỉ gồm đơn có đánh giá."),
-    card("Bubble: thời gian giao, rating, doanh thu", "g-bubble", "Kích thước bong bóng = doanh thu."),
-    card("Tỷ lệ hoàn trả theo quốc gia và nhóm hàng", "g-heat-return", "Tất cả đơn hàng.", full=True),
+    card("Vận chuyển theo quốc gia", "g-ship", full=True),
+    card("Hoàn trả và rating theo nhóm hàng", "g-catperf", "Rating chỉ gồm đơn có đánh giá."),
+    card("Bubble nhóm hàng", "g-bubble"),
+    card("Hoàn trả theo quốc gia và nhóm hàng", "g-heat-return", full=True),
 ], style=GRID)
 
 tab_discount = html.Div([
-    table_card("Thống kê theo nhóm chiết khấu", "tbl-discount-groups", "Gộp theo mức chiết khấu của đơn hàng."),
+    table_card("Thống kê theo nhóm chiết khấu", "tbl-discount-groups", "Gộp theo mức chiết khấu của đơn hàng (tất cả đơn hàng)."),
     table_card("Kiểm định thống kê", "tbl-discount-tests", "Spearman giữa Discount với Quantity/Amount; Kruskal–Wallis giữa các nhóm."),
-    card("Phân phối số lượng sản phẩm theo nhóm Discount", "g-box-qty"),
-    card("Phân phối giá trị giao dịch theo nhóm Discount", "g-box-amt"),
+    card("Số lượng sản phẩm theo nhóm Discount", "g-box-qty"),
+    card("Giá trị giao dịch theo nhóm Discount", "g-box-amt"),
 ], style=GRID)
 
 TAB_STYLE = {"padding": "8px 16px", "fontFamily": FONT}
@@ -282,7 +289,7 @@ def update_revenue(years, countries, categories, channels, tiers):
 
 @app.callback(
     Output("g-churn-channel", "figure"), Output("g-churn-recency", "figure"), Output("g-churn-orders", "figure"),
-    Output("g-top-customers", "figure"), Output("txt-top-summary", "children"),
+    Output("g-top-customers", "figure"), Output("txt-top-summary", "children"), Output("txt-churn-test", "children"),
     Output("g-hist-freq", "figure"), Output("g-hist-mon", "figure"), Output("g-hist-mon-log", "figure"),
     Output("g-concentration", "figure"), FILTERS,
 )
@@ -290,7 +297,7 @@ def update_customers(years, countries, categories, channels, tiers):
     fact, cust = get_filtered(years, countries, categories, channels, tiers)
     empty = cb.empty_figure()
     if cust.empty:
-        return empty, empty, empty, empty, "", empty, empty, empty, empty
+        return empty, empty, empty, empty, "", "", empty, empty, empty, empty
     churn_all = cust[C.CHURNED].mean() * 100
     k = cfg.CHURN_ALERT_MULTIPLIER
 
@@ -302,6 +309,16 @@ def update_customers(years, countries, categories, channels, tiers):
                         f"({s.spend_share_pct:.1f}% tổng chi tiêu). Xác suất nhị thức P(X ≥ {int(s.churned_in_top)}) = {s.binomial_p_value:.1%}.")
     except Exception:  # noqa: BLE001
         log.exception("Không tính được top_customers_summary")
+
+    test_text = ""
+    try:
+        res = dp.churn_channel_test(cust)
+        if res:
+            verdict = ("khác biệt giữa các kênh có ý nghĩa thống kê" if res["p_value"] < 0.05
+                       else "chưa có bằng chứng thống kê cho thấy các kênh khác nhau")
+            test_text = f"Kiểm định chi-bình phương: p = {res['p_value']:.3f} → {verdict}."
+    except Exception:  # noqa: BLE001
+        log.exception("Không tính được kiểm định churn theo kênh")
 
     fm = dp.customer_frequency_monetary(fact) if not fact.empty else pd.DataFrame(columns=["frequency", "monetary"])
     upper = None
@@ -319,9 +336,10 @@ def update_customers(years, countries, categories, channels, tiers):
              "Tỷ lệ rời bỏ theo số đơn hàng đã mua", "Số đơn hàng đã mua"),
         safe(cb.bar_top_customers, dp.top_customers(cust)),
         summary_text,
+        test_text,
         safe(cb.histogram_distribution, fm, "frequency", "Phân phối Frequency", "Số đơn hàng (Frequency)", discrete=True),
         safe(cb.histogram_distribution, fm, "monetary", "Phân phối Monetary", "Tổng chi tiêu (USD)", show_outlier_threshold=upper),
-        safe(cb.histogram_distribution, fm, "monetary", "Phân phối Monetary (log1p)", "log1p(Monetary in USD)", log_x=True),
+        safe(cb.histogram_distribution, fm, "monetary", "Phân phối Monetary (log)", "Tổng chi tiêu (USD, log)", log_x=True),
         safe(lambda: cb.bar_revenue_concentration(dp.revenue_concentration(fm))) if not fm.empty else empty,
     )
 
@@ -421,7 +439,6 @@ def click_heatmap(click):
 )
 def reset_filters(_):
     return [YEARS[0], YEARS[-1]], [], [], [], []
-
 
 
 def main() -> None:

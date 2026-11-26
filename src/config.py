@@ -15,12 +15,11 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_ROOT / "data"
 DATA_RAW = DATA_DIR / "raw"          # dữ liệu gốc, chỉ đọc
 DATA_CLEANED = DATA_DIR / "cleaned"  # dữ liệu sạch dạng bảng chi tiết
-DATA_MARTS = DATA_DIR / "marts"      # bảng tổng hợp cho dashboard / Power BI
+DATA_MARTS = DATA_DIR / "marts"      # bảng tổng hợp cho dashboard
 
 NOTEBOOKS_DIR = PROJECT_ROOT / "notebooks"
 DASHBOARDS_DIR = PROJECT_ROOT / "dashboards"
 PLOTLY_APP_DIR = DASHBOARDS_DIR / "plotly_app"
-POWERBI_DIR = DASHBOARDS_DIR / "powerbi"
 
 EXPORTS_DIR = PROJECT_ROOT / "exports"
 EXPORTS_HTML = EXPORTS_DIR / "interactive_html"
@@ -29,7 +28,7 @@ EXPORTS_PNG = EXPORTS_DIR / "archive_static_png"
 
 def ensure_dirs() -> None:
     """Tạo các thư mục đầu ra nếu chưa có."""
-    for folder in (DATA_RAW, DATA_CLEANED, DATA_MARTS, EXPORTS_HTML, EXPORTS_PNG, PLOTLY_APP_DIR, POWERBI_DIR):
+    for folder in (DATA_RAW, DATA_CLEANED, DATA_MARTS, EXPORTS_HTML, EXPORTS_PNG, PLOTLY_APP_DIR):
         folder.mkdir(parents=True, exist_ok=True)
 
 
@@ -68,7 +67,7 @@ MART_FILES = {
     "churn_by_order_count": "mart_churn_by_order_count.csv",
     "category_revenue_net": "mart_category_revenue_net.csv",
 }
-MART_ENCODING = "utf-8-sig"  # mở đúng tiếng Việt trong Excel và Power BI
+MART_ENCODING = "utf-8-sig"  # mở đúng tiếng Việt trong Excel
 
 
 # ======================================================================
@@ -174,7 +173,7 @@ CHURN_ALERT_MULTIPLIER = 2  # cột đỏ nếu tỷ lệ rời bỏ > 2 lần m
 
 
 # ======================================================================
-# 5. DESIGN SYSTEM (dùng chung cho Plotly và Power BI theme.json)
+# 5. DESIGN SYSTEM (dùng chung cho toàn bộ biểu đồ Plotly)
 # ======================================================================
 PALETTE = {
     "navy": "#1E293B",           # tiêu đề, đường tham chiếu, nhấn mạnh phụ

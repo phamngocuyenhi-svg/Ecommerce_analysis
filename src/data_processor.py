@@ -132,6 +132,8 @@ def monthly_seasonality(monthly: pd.DataFrame, years: tuple[int, int] = cfg.SEAS
 def revenue_ranking(fact: pd.DataFrame, by: str) -> pd.DataFrame:
     """Doanh thu, số đơn, AOV, tỷ trọng và tỷ trọng tích lũy theo `by` (country hoặc category)."""
     delivered = fact[fact[O.ORDER_STATUS] == cfg.STATUS_DELIVERED]
+    if delivered.empty:
+        return pd.DataFrame(columns=["rank", by, "revenue_usd", "orders", "avg_order_value_usd", "share_pct", "cum_share_pct"])
     total = delivered[O.TOTAL_AMOUNT].sum()
     out = (
         delivered.groupby(by)
@@ -142,7 +144,7 @@ def revenue_ranking(fact: pd.DataFrame, by: str) -> pd.DataFrame:
         )
         .sort_values("revenue_usd", ascending=False)  # xếp giảm dần TRƯỚC khi cộng dồn
     )
-    out["share_pct"] = out["revenue_usd"] / total * 100
+    out["share_pct"] = (out["revenue_usd"] / total * 100) if total > 0 else 0.0
     out["cum_share_pct"] = out["share_pct"].cumsum()
     out.insert(0, "rank", range(1, len(out) + 1))
     return out.reset_index().round(2)
@@ -155,7 +157,8 @@ def country_category_revenue(fact: pd.DataFrame) -> pd.DataFrame:
         delivered.groupby([C.COUNTRY, O.CATEGORY], as_index=False)
         .agg(revenue_usd=(O.TOTAL_AMOUNT, "sum"), orders=(O.ORDER_ID, "count"))
     )
-    out["share_in_country_pct"] = out["revenue_usd"] / out.groupby(C.COUNTRY)["revenue_usd"].transform("sum") * 100
+    country_totals = out.groupby(C.COUNTRY)["revenue_usd"].transform("sum")
+    out["share_in_country_pct"] = np.where(country_totals > 0, out["revenue_usd"] / country_totals * 100, 0.0)
     return out.round(2)
 
 
@@ -171,6 +174,19 @@ def churn_by_channel(customers: pd.DataFrame) -> pd.DataFrame:
     return out.reset_index()
 
 
+def churn_channel_test(customers: pd.DataFrame) -> dict | None:
+    """Kiểm định chi-bình phương: tỷ lệ churn có khác nhau giữa các kênh thu hút không (Câu 4).
+
+    Trả về {"chi2", "p_value", "dof"}; None nếu không đủ dữ liệu (dưới 2 kênh hoặc dưới 2 giá trị churn).
+    """
+    _require(customers, [C.ACQUISITION_CHANNEL, C.CHURNED], "customers")
+    table = pd.crosstab(customers[C.ACQUISITION_CHANNEL], customers[C.CHURNED])
+    if table.shape[0] < 2 or table.shape[1] < 2:
+        return None
+    chi2, p_value, dof, _ = stats.chi2_contingency(table)
+    return {"chi2": float(chi2), "p_value": float(p_value), "dof": int(dof)}
+
+
 # --- Câu 5: Frequency / Monetary ở cấp khách hàng ---------------------
 def customer_frequency_monetary(
     orders: pd.DataFrame, exclude_status: tuple[str, ...] = cfg.STATUS_EXCLUDED_NET
@@ -178,6 +194,8 @@ def customer_frequency_monetary(
     """Mỗi dòng = 1 khách hàng: frequency (số đơn), monetary (tổng chi tiêu), aov, cờ ngoại lai IQR của Monetary."""
     _require(orders, [O.ORDER_ID, O.CUSTOMER_ID, O.ORDER_STATUS, O.TOTAL_AMOUNT], "orders")
     valid = orders[~orders[O.ORDER_STATUS].isin(exclude_status)]
+    if valid.empty:
+        return pd.DataFrame(columns=[O.CUSTOMER_ID, "frequency", "monetary", "is_monetary_outlier", "aov"])
     out = valid.groupby(O.CUSTOMER_ID, as_index=False).agg(
         frequency=(O.ORDER_ID, "nunique"),
         monetary=(O.TOTAL_AMOUNT, "sum"),
@@ -192,15 +210,18 @@ def customer_frequency_monetary(
 
 def revenue_concentration(customer_fm: pd.DataFrame) -> pd.DataFrame:
     """Tỷ trọng Monetary của top 1%, 5%, 10%, 20% khách chi tiêu cao nhất."""
+    if customer_fm.empty:
+        return pd.DataFrame(columns=["top_customer_pct", "customers", "revenue_share_pct"])
     sorted_m = customer_fm["monetary"].sort_values(ascending=False).reset_index(drop=True)
     total = sorted_m.sum()
     rows = []
     for pct in cfg.CONCENTRATION_PERCENTS:
         n = max(int(np.ceil(len(sorted_m) * pct / 100)), 1)
+        share = round(sorted_m.head(n).sum() / total * 100, 2) if total > 0 else 0.0
         rows.append({
             "top_customer_pct": pct,
             "customers": n,
-            "revenue_share_pct": round(sorted_m.head(n).sum() / total * 100, 2),
+            "revenue_share_pct": share,
         })
     return pd.DataFrame(rows)
 
@@ -240,7 +261,8 @@ def discount_group_summary(orders: pd.DataFrame) -> pd.DataFrame:
         total_amount_usd=(O.TOTAL_AMOUNT, "sum"),
         avg_discount_pct=(O.DISCOUNT_PCT, "mean"),
     )
-    out["order_share_pct"] = out["orders"] / out["orders"].sum() * 100
+    total_orders = out["orders"].sum()
+    out["order_share_pct"] = (out["orders"] / total_orders * 100) if total_orders > 0 else 0.0
     return out.round(2).reset_index()
 
 
@@ -318,19 +340,21 @@ def top_customers(customers: pd.DataFrame, n: int = cfg.TOP_N_CUSTOMERS) -> pd.D
 def top_customers_summary(customers: pd.DataFrame, n: int = cfg.TOP_N_CUSTOMERS) -> pd.DataFrame:
     """So sánh tỷ lệ rời bỏ của Top N với toàn bộ khách (kèm xác suất nhị thức P(X >= k))."""
     top = top_customers(customers, n)
-    churn_all = customers[C.CHURNED].mean()
+    churn_all = float(customers[C.CHURNED].mean())
     k = int(top[C.CHURNED].sum())
     size = len(top)
     p_value = sum(comb(size, i) * churn_all**i * (1 - churn_all) ** (size - i) for i in range(k, size + 1))
-    churn_top = top[C.CHURNED].mean()
+    churn_top = float(top[C.CHURNED].mean()) if size > 0 else 0.0
+    total_spend_all = float(customers[C.TOTAL_SPEND].sum())
+    top_spend = float(top[C.TOTAL_SPEND].sum())
     return pd.DataFrame([{
         "top_n": size,
         "churned_in_top": k,
         "churn_rate_top_pct": round(churn_top * 100, 2),
         "churn_rate_all_pct": round(churn_all * 100, 2),
-        "churn_ratio_vs_all": round(churn_top / churn_all, 2),
-        "top_spend_usd": round(top[C.TOTAL_SPEND].sum(), 2),
-        "spend_share_pct": round(top[C.TOTAL_SPEND].sum() / customers[C.TOTAL_SPEND].sum() * 100, 2),
+        "churn_ratio_vs_all": round(churn_top / churn_all, 2) if churn_all > 0 else np.nan,
+        "top_spend_usd": round(top_spend, 2),
+        "spend_share_pct": round(top_spend / total_spend_all * 100, 2) if total_spend_all > 0 else 0.0,
         "binomial_p_value": round(p_value, 4),
     }])
 
@@ -359,9 +383,12 @@ def category_revenue_net(
 ) -> pd.DataFrame:
     """Doanh thu thuần (loại đơn hủy và hoàn) theo nhóm hàng và tỷ trọng."""
     net = orders[~orders[O.ORDER_STATUS].isin(exclude_status)]
+    if net.empty:
+        return pd.DataFrame(columns=[O.CATEGORY, "revenue_usd", "share_pct"])
     out = net.groupby(O.CATEGORY, as_index=False)[O.TOTAL_AMOUNT].sum()
     out = out.rename(columns={O.TOTAL_AMOUNT: "revenue_usd"}).sort_values("revenue_usd", ascending=False)
-    out["share_pct"] = out["revenue_usd"] / out["revenue_usd"].sum() * 100
+    total = out["revenue_usd"].sum()
+    out["share_pct"] = (out["revenue_usd"] / total * 100) if total > 0 else 0.0
     return out.round(2).reset_index(drop=True)
 
 

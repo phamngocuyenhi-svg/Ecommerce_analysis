@@ -266,7 +266,7 @@ def heatmap_matrix(
     fig.update_xaxes(tickangle=-40, title_text=None, showline=False, ticks="")
     fig.update_yaxes(autorange="reversed", title_text=None, showgrid=False, showline=False, ticks="")
     return apply_theme(fig, title, height=max(cfg.DEFAULT_HEIGHT, 28 * len(pivot) + 220),
-                       subtitle=subtitle or "Màu càng đậm giá trị càng cao · bấm vào ô để xem chi tiết")
+                       subtitle=subtitle or "Màu càng đậm giá trị càng cao · di chuột vào ô để xem chi tiết")
 
 
 # ======================================================================
@@ -320,8 +320,8 @@ def histogram_distribution(
 ) -> go.Figure:
     """Histogram một biến, kèm đường trung bình và trung vị.
 
-- ``discrete=True``: biến đếm nguyên (Frequency), mỗi cột là một giá trị.
-- ``log_x=True``: biến đổi dữ liệu bằng log1p(x) = ln(1 + x) để thấy hình dạng khi co đuôi phải.
+    - ``discrete=True``: biến đếm nguyên (Frequency), mỗi cột là một giá trị.
+    - ``log_x=True``: biến đổi dữ liệu bằng log1p(x) = ln(1 + x) để thấy hình dạng khi co đuôi phải.
     """
     if df.empty:
         return empty_figure()
@@ -354,10 +354,11 @@ def histogram_distribution(
     fig.add_vline(x=median, line_dash="dashdot", line_color=P["navy"], line_width=2,
                   annotation_text=f"Trung vị {median:,.2f}", annotation_position="top left",
                   annotation_font=dict(size=11, color=P["navy"]))
-    if show_outlier_threshold is not None:
+    if show_outlier_threshold is not None and (not log_x or show_outlier_threshold >= 0):
         thresh = float(np.log1p(show_outlier_threshold)) if log_x else show_outlier_threshold
+        thresh_fmt = f"{thresh:,.2f}" if log_x else f"{thresh:,.0f}"
         fig.add_vline(x=thresh, line_dash="dot", line_color=P["text_muted"], line_width=1.5,
-                      annotation_text=f"Ngưỡng ngoại lai {thresh:,.2f}", annotation_position="top right",
+                      annotation_text=f"Ngưỡng ngoại lai {thresh_fmt}", annotation_position="top right",
                       annotation_font=dict(size=11, color=P["text_muted"]))
 
     fig.update_xaxes(title_text=x_title or cfg.label(column))
