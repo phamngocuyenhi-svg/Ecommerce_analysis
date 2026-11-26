@@ -1,0 +1,7 @@
+KET QUA PHAN TICH CAU 6 - DISCOUNT
+Tong so giao dich hop le: 25,000
+Discount va Quantity: rho=-0.0083, p=0.190637; xu hướng ngược chiều, chưa có ý nghĩa thống kê.
+Discount va Amount: rho=-0.1057, p=4.74429e-63; xu hướng ngược chiều, có ý nghĩa thống kê.
+Kruskal-Wallis Quantity: H=2.6236, p=0.622647
+Kruskal-Wallis Amount: H=392.4901, p=1.16643e-83
+Luu y: ket qua khong tu dong chung minh quan he nhan qua.

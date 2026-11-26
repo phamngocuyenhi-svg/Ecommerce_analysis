@@ -6,7 +6,7 @@ Chạy từ thư mục gốc dự án:
 
 Bộ lọc chéo (thanh trên cùng): năm, quốc gia, nhóm hàng, kênh thu hút, hạng thành viên.
 Có thể bấm trực tiếp vào cột quốc gia / nhóm hàng / kênh (hoặc ô heatmap) để lọc nhanh; nút "Xóa bộ lọc" để đặt lại.
-Số liệu được tính lại từ data/cleaned/ bằng src/data_processor.py nên không cần chạy trước bước xuất marts.
+Số liệu được tính trực tiếp từ data/cleaned/ bằng src/data_processor.py.
 """
 from __future__ import annotations
 

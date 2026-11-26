@@ -1,6 +1,6 @@
-"""Hàm vẽ biểu đồ tương tác Plotly dùng lại cho dashboard (Plotly Dash/HTML) và export.
+"""Hàm vẽ biểu đồ tương tác Plotly dùng lại cho dashboard (Plotly Dash và report/dashboard.html).
 
-Mọi hàm nhận DataFrame có schema giống các bảng trong data/marts/ (xem data_processor.py)
+Mọi hàm nhận DataFrame do data_processor.py tổng hợp từ data/cleaned/
 và trả về ``plotly.graph_objects.Figure`` đã áp dụng Design System trong config.py:
 nền trong suốt, bảng màu navy/teal/coral, tiêu đề kèm subtitle, lưới chấm mảnh,
 số rút gọn K/M và hover card đầy đủ chỉ số. Zoom/pan do Plotly hỗ trợ sẵn.
@@ -105,8 +105,8 @@ def empty_figure(message: str = "Không có dữ liệu cho bộ lọc đã ch�
 
 
 def save_html(fig: go.Figure, filename: str, folder: Path | None = None) -> Path:
-    """Xuất biểu đồ thành HTML tương tác (mặc định vào exports/interactive_html/)."""
-    folder = folder or cfg.EXPORTS_HTML
+    """Xuất một biểu đồ thành HTML tương tác (mặc định vào report/)."""
+    folder = folder or cfg.REPORT_DIR
     folder.mkdir(parents=True, exist_ok=True)
     path = folder / (filename if filename.endswith(".html") else f"{filename}.html")
     fig.write_html(path, include_plotlyjs="cdn", config={"displaylogo": False})

@@ -15,20 +15,18 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_ROOT / "data"
 DATA_RAW = DATA_DIR / "raw"          # dữ liệu gốc, chỉ đọc
 DATA_CLEANED = DATA_DIR / "cleaned"  # dữ liệu sạch dạng bảng chi tiết
-DATA_MARTS = DATA_DIR / "marts"      # bảng tổng hợp cho dashboard
 
 NOTEBOOKS_DIR = PROJECT_ROOT / "notebooks"
 DASHBOARDS_DIR = PROJECT_ROOT / "dashboards"
 PLOTLY_APP_DIR = DASHBOARDS_DIR / "plotly_app"
 
-EXPORTS_DIR = PROJECT_ROOT / "exports"
-EXPORTS_HTML = EXPORTS_DIR / "interactive_html"
-EXPORTS_PNG = EXPORTS_DIR / "archive_static_png"
+REPORT_DIR = PROJECT_ROOT / "report"
+DASHBOARD_HTML_FILE = REPORT_DIR / "dashboard.html"
 
 
 def ensure_dirs() -> None:
     """Tạo các thư mục đầu ra nếu chưa có."""
-    for folder in (DATA_RAW, DATA_CLEANED, DATA_MARTS, EXPORTS_HTML, EXPORTS_PNG, PLOTLY_APP_DIR):
+    for folder in (DATA_RAW, DATA_CLEANED, REPORT_DIR, PLOTLY_APP_DIR):
         folder.mkdir(parents=True, exist_ok=True)
 
 
@@ -42,32 +40,6 @@ CLEANED_FILES = {
     "product_summary": "product_summary_cleaned.csv",
 }
 QUALITY_REPORT_FILE = "data_quality_report.csv"
-
-# Bảng tổng hợp do data_processor.py tạo ra (tiền tố mart_ để không ghi đè
-# các file CSV mà notebook của nhóm xuất: cau4_*.csv, discount_summary.csv, q5_*.csv).
-MART_FILES = {
-    "fact_orders": "mart_fact_orders.csv",
-    "kpi_overview": "mart_kpi_overview.csv",
-    "monthly_trend": "mart_monthly_trend.csv",
-    "monthly_seasonality": "mart_monthly_seasonality.csv",
-    "revenue_by_country": "mart_revenue_by_country.csv",
-    "revenue_by_category": "mart_revenue_by_category.csv",
-    "country_category_revenue": "mart_country_category_revenue.csv",
-    "churn_by_channel": "mart_churn_by_channel.csv",
-    "customer_fm": "mart_customer_frequency_monetary.csv",
-    "revenue_concentration": "mart_revenue_concentration.csv",
-    "discount_groups": "mart_discount_groups.csv",
-    "discount_tests": "mart_discount_tests.csv",
-    "shipping_by_country": "mart_shipping_by_country.csv",
-    "category_performance": "mart_category_performance.csv",
-    "country_category_return": "mart_country_category_return.csv",
-    "top_customers": "mart_top_customers.csv",
-    "top_customers_summary": "mart_top_customers_summary.csv",
-    "churn_by_recency": "mart_churn_by_recency.csv",
-    "churn_by_order_count": "mart_churn_by_order_count.csv",
-    "category_revenue_net": "mart_category_revenue_net.csv",
-}
-MART_ENCODING = "utf-8-sig"  # mở đúng tiếng Việt trong Excel
 
 
 # ======================================================================

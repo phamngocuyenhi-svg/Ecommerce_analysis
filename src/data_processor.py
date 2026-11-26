@@ -1,16 +1,11 @@
-"""Đọc dữ liệu sạch trong data/cleaned/ và tạo các bảng tổng hợp (marts) trong data/marts/.
+"""Đọc dữ liệu sạch trong data/cleaned/ và tính toán các bảng tổng hợp phục vụ Dashboard.
 
-Các hàm tính toán là hàm thuần (nhận DataFrame, trả DataFrame) nên có thể dùng lại
-trong dashboard để tính lại số liệu theo bộ lọc. Logic tổng hợp bám theo notebook của nhóm
-(notebooks/01..10); quy ước loại đơn nằm ở config.py.
-
-Chạy tạo toàn bộ marts (từ thư mục gốc dự án):
-    python -m src.data_processor
-    python -m src.data_processor --only revenue_by_country churn_by_channel
+Các hàm tính toán là hàm thuần (nhận DataFrame, trả DataFrame) dùng trực tiếp
+trong dashboard tương tác (app.py) và trình xuất dashboard tĩnh (export_html.py).
+Logic tổng hợp bám sát notebook của nhóm (notebooks/01..10); quy ước loại đơn nằm ở config.py.
 """
 from __future__ import annotations
 
-import argparse
 from math import comb
 
 import numpy as np
@@ -50,14 +45,6 @@ def load_cleaned(name: str) -> pd.DataFrame:
 def load_all() -> dict[str, pd.DataFrame]:
     """Đọc 4 bảng dữ liệu sạch."""
     return {name: load_cleaned(name) for name in cfg.CLEANED_FILES}
-
-
-def load_mart(key: str) -> pd.DataFrame:
-    """Đọc một mart đã xuất trong data/marts/ (key: khóa trong config.MART_FILES)."""
-    path = cfg.DATA_MARTS / cfg.MART_FILES[key]
-    if not path.is_file():
-        raise FileNotFoundError(f"Chưa có {path}. Hãy chạy: python -m src.data_processor")
-    return pd.read_csv(path)
 
 
 # ======================================================================
@@ -393,10 +380,10 @@ def category_revenue_net(
 
 
 # ======================================================================
-# 4. TẠO VÀ XUẤT TOÀN BỘ MARTS
+# 4. TỔNG HỢP TOÀN BỘ BẢNG TRONG BỘ NHỚ CHO DASHBOARD
 # ======================================================================
-def build_marts(data: dict[str, pd.DataFrame] | None = None) -> dict[str, pd.DataFrame]:
-    """Tính toàn bộ marts, trả về dict {khóa trong config.MART_FILES: DataFrame}."""
+def build_summaries(data: dict[str, pd.DataFrame] | None = None) -> dict[str, pd.DataFrame]:
+    """Tính toàn bộ bảng tổng hợp từ dữ liệu sạch trong bộ nhớ."""
     data = data or load_all()
     orders, customers, monthly = data["orders"], data["customers"], data["monthly_revenue"]
     fact = build_fact_orders(orders, customers)
@@ -423,31 +410,3 @@ def build_marts(data: dict[str, pd.DataFrame] | None = None) -> dict[str, pd.Dat
         "churn_by_order_count": churn_by_order_count(customers),
         "category_revenue_net": category_revenue_net(orders),
     }
-
-
-def save_marts(marts: dict[str, pd.DataFrame]) -> None:
-    cfg.DATA_MARTS.mkdir(parents=True, exist_ok=True)
-    for key, df in marts.items():
-        df.to_csv(cfg.DATA_MARTS / cfg.MART_FILES[key], index=False, encoding=cfg.MART_ENCODING)
-
-
-def main(argv: list[str] | None = None) -> None:
-    parser = argparse.ArgumentParser(description="Tạo các bảng tổng hợp trong data/marts/ từ data/cleaned/.")
-    parser.add_argument("--only", nargs="*", metavar="MART",
-                        help=f"chỉ xuất các mart này. Khóa hợp lệ: {', '.join(cfg.MART_FILES)}")
-    args = parser.parse_args(argv)
-
-    marts = build_marts()
-    if args.only:
-        unknown = [k for k in args.only if k not in marts]
-        if unknown:
-            parser.error(f"Khóa không hợp lệ: {unknown}")
-        marts = {k: marts[k] for k in args.only}
-    save_marts(marts)
-    print(f"Đã xuất {len(marts)} bảng vào {cfg.DATA_MARTS}")
-    for key, df in marts.items():
-        print(f"  {cfg.MART_FILES[key]:<42} {len(df):>7,} dòng x {df.shape[1]} cột")
-
-
-if __name__ == "__main__":
-    main()
